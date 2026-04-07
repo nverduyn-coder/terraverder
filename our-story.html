@@ -116,8 +116,8 @@ footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
 .hamburger-btn{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer;}
 .hamburger-btn span{display:block;width:22px;height:1.5px;background:#2E2C28;}
 @media(max-width:768px){.hamburger-btn{display:flex;}}
-#mobile-nav-drawer{position:fixed;inset:0;background:#F8F4EE;z-index:9999;transform:translateX(100%);transition:transform .4s cubic-bezier(.25,.46,.45,.94);display:flex;flex-direction:column;padding:2rem;overflow-y:auto;}
-#mobile-nav-drawer.open{transform:translateX(0);}
+#mobile-nav-drawer{position:fixed;top:0;left:0;right:0;bottom:0;background:#F8F4EE;z-index:9999;transform:translateX(100%);transition:transform .4s cubic-bezier(.25,.46,.45,.94);display:flex;flex-direction:column;padding:2rem;overflow-y:auto;pointer-events:none;}
+#mobile-nav-drawer.open{transform:translateX(0);pointer-events:all;}
 .mnav-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;}
 .mnav-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400;color:#2E2C28;letter-spacing:.02em;}
 .mnav-logo em{color:#B85C38;font-style:italic;}
@@ -271,4 +271,9 @@ footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
   </div>
   <div class="mnav-bottom"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b232a2727240b3f2e39392a3d2e392f2e652527">[email&#160;protected]</a> · +31 20 123 4567</div>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.
+<script>
+function openMNav(){document.getElementById('mobile-nav-drawer').classList.add('open');}
+function closeMNav(){document.getElementById('mobile-nav-drawer').classList.remove('open');}
+</script>
+</body>
+</html>

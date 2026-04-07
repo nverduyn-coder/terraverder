@@ -452,8 +452,8 @@ footer{background:var(--ink);color:#fff;padding:4rem 2.5rem 2rem}
 .hamburger-btn{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer;}
 .hamburger-btn span{display:block;width:22px;height:1.5px;background:#2E2C28;}
 @media(max-width:768px){.hamburger-btn{display:flex;}}
-#mobile-nav-drawer{position:fixed;inset:0;background:#F8F4EE;z-index:9999;transform:translateX(100%);transition:transform .4s cubic-bezier(.25,.46,.45,.94);display:flex;flex-direction:column;padding:2rem;overflow-y:auto;}
-#mobile-nav-drawer.open{transform:translateX(0);}
+#mobile-nav-drawer{position:fixed;top:0;left:0;right:0;bottom:0;background:#F8F4EE;z-index:9999;transform:translateX(100%);transition:transform .4s cubic-bezier(.25,.46,.45,.94);display:flex;flex-direction:column;padding:2rem;overflow-y:auto;pointer-events:none;}
+#mobile-nav-drawer.open{transform:translateX(0);pointer-events:all;}
 .mnav-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;}
 .mnav-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400;color:#2E2C28;letter-spacing:.02em;}
 .mnav-logo em{color:#B85C38;font-style:italic;}
@@ -535,6 +535,36 @@ footer{background:var(--ink);color:#fff;padding:4rem 2.5rem 2rem}
 
 <!-- MOBILE NAV -->
 
+  <div class="hero-right">
+    <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Placemats</span></div></div>
+    <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Handtassen</span></div></div>
+    <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Kussens</span></div></div>
+    <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Accessoires</span></div></div>
+  </div>
+</section>
+
+
+<!-- MOBILE NAV OLD (cleanup) -->
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Duurzaam wonen, bewust kiezen</span>
+    <h1>Mooi thuis,<br><em>betere keuzes.</em></h1>
+    <p class="hero-sub">Ambachtelijk gemaakte placemats, handtassen en woonaccessoires — vervaardigd uit natuurlijk linnen, jute en katoen. Ontworpen in Amsterdam, eerlijk gemaakt in kleine series.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn-primary">
+        Bekijk collectie
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="our-story.html" class="btn-ghost">Ons verhaal</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>100%</strong><span>Natuurlijke vezels</span></div>
+      <div class="hero-stat"><strong>2.400+</strong><span>Blije huizen</span></div>
+      <div class="hero-stat"><strong>0</strong><span>Plastic verpakking</span></div>
+    </div>
+  </div>
   <div class="hero-right">
     <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Placemats</span></div></div>
     <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Handtassen</span></div></div>
@@ -1178,21 +1208,18 @@ renderProducts();
     <a href="blog.html" onclick="closeMNav()">Journal</a>
     <a href="gift-finder.html" onclick="closeMNav()">Gift Finder</a>
   </div>
-  <div class="mnav-bottom">hallo@terraverde.nl · +31 20 123 4567</div>
+  <div class="mnav-bottom"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e58d8489898aa591809797849380978180cb8b89">[email&#160;protected]</a> · +31 20 123 4567</div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function openMNav(){document.getElementById('mobile-nav-drawer').classList.add('open');}
 function closeMNav(){document.getElementById('mobile-nav-drawer').classList.remove('open');}
 </script>
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
-
-<!-- BACK TO TOP -->
-<button id="back-top" onclick="scrollToTop()" aria-label="Terug naar boven">
-  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
-
 </body>
 </html>
