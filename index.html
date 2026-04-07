@@ -522,16 +522,16 @@ footer{background:var(--ink);color:#fff;padding:4rem 2.5rem 2rem}
 <div id="mobile-nav">
   <div class="mobile-nav-header">
     <span class="nav-logo-text">Terra<em>Verde</em></span>
-    <button class="mobile-nav-close" onclick="toggleMobileNav()">✕</button>
+    <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
   </div>
   <div class="mobile-nav-links">
-    <a href="#products" onclick="toggleMobileNav()">Shop</a>
-    <a href="index.html#featured" onclick="toggleMobileNav()">Collectie</a>
-    <a href="sustainability.html" onclick="toggleMobileNav()">Duurzaamheid</a>
-    <a href="our-story.html" onclick="toggleMobileNav()">Ons Verhaal</a>
-    <a href="blog.html" onclick="toggleMobileNav()">Journal</a>
-    <a href="gift-finder.html" onclick="toggleMobileNav()">Gift Finder</a>
-    <a href="product-detail.html" onclick="toggleMobileNav()">Producten</a>
+    <a href="#products" onclick="closeMobileNav()">Shop</a>
+    <a href="index.html#featured" onclick="closeMobileNav()">Collectie</a>
+    <a href="sustainability.html" onclick="closeMobileNav()">Duurzaamheid</a>
+    <a href="our-story.html" onclick="closeMobileNav()">Ons Verhaal</a>
+    <a href="blog.html" onclick="closeMobileNav()">Journal</a>
+    <a href="gift-finder.html" onclick="closeMobileNav()">Gift Finder</a>
+    <a href="product-detail.html" onclick="closeMobileNav()">Producten</a>
   </div>
   <div class="mobile-nav-bottom">
     <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0169606d6d6e41756473736077647365642f6f6d">[email&#160;protected]</a> · +31 20 123 4567</p>
@@ -1131,11 +1131,18 @@ function toggleMobileNav() {
   if (!nav) return;
   if (nav.classList.contains('open')) {
     nav.classList.remove('open');
-    nav.style.transform = 'translateX(100%)';
+    nav.style.transform = '';
   } else {
     nav.classList.add('open');
     nav.style.transform = 'translateX(0px)';
   }
+}
+
+function closeMobileNav() {
+  var nav = document.getElementById('mobile-nav');
+  if (!nav) return;
+  nav.classList.remove('open');
+  nav.style.transform = '';
 }
 function scrollToTop() { window.scrollTo({top:0,behavior:'smooth'}); }
 
