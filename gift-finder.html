@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gift Finder — TerraVerde | Find the Perfect Sustainable Gift</title>
+<meta name="description" content="Find the perfect sustainable gift in 30 seconds. Tell us who it's for, the occasion and your budget — we'll match you with the perfect TerraVerde gift.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#F8F4EE;--cream-deep:#F0EAE0;--terra:#B85C38;--terra-light:#F2E4DC;--sage:#5C7A5E;--sage-light:#DDE8DE;--forest:#2A3D2C;--charcoal:#1C1C1A;--ink:#2E2C28;--muted:#6E6860;--border:#DDD8D0;--border-light:#EDE9E2;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--ease:cubic-bezier(.25,.46,.45,.94)}
+html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--sans)}
+nav{background:var(--cream);border-bottom:1px solid var(--border-light);position:sticky;top:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem}
+.logo{font-family:var(--serif);font-size:22px;font-weight:400;cursor:pointer}.logo em{color:var(--terra);font-style:italic}
+.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{font-size:13px;letter-spacing:.04em;color:var(--muted)}
+.icon-btn{background:none;border:none;padding:8px;cursor:pointer;display:flex;align-items:center}.icon-btn svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.5}
+
+/* HERO */
+.gf-hero{background:var(--charcoal);color:#fff;padding:6rem 2.5rem;text-align:center}
+.gf-hero-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);display:block;margin-bottom:1rem}
+.gf-hero h1{font-family:var(--serif);font-size:clamp(38px,5vw,64px);font-weight:300;line-height:1.15;margin-bottom:1rem}
+.gf-hero h1 em{font-style:italic;color:rgba(184,92,56,.85)}
+.gf-hero p{font-size:16px;color:rgba(255,255,255,.55);max-width:480px;margin:0 auto}
+
+/* FINDER */
+.finder{max-width:800px;margin:0 auto;padding:4rem 2.5rem}
+.finder-progress{display:flex;gap:0;margin-bottom:3rem;border:1px solid var(--border)}
+.progress-step{flex:1;padding:.6rem;text-align:center;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-right:1px solid var(--border);transition:all .3s}
+.progress-step:last-child{border-right:none}
+.progress-step.done{background:var(--sage-light);color:var(--sage)}
+.progress-step.active{background:var(--charcoal);color:#fff}
+
+.step{display:none}.step.active{display:block}
+.step-q{font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:300;color:var(--charcoal);margin-bottom:.5rem}
+.step-sub{font-size:14px;color:var(--muted);margin-bottom:2.5rem}
+
+.choice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.choice-card{border:1.5px solid var(--border);padding:1.5rem;cursor:pointer;transition:all .25s var(--ease);text-align:center;background:transparent}
+.choice-card:hover{border-color:var(--terra);background:var(--terra-light)}
+.choice-card.selected{border-color:var(--charcoal);background:var(--charcoal);color:#fff}
+.choice-card.selected .cc-icon{filter:invert(1)}
+.cc-icon{font-size:28px;margin-bottom:.75rem;display:block}
+.cc-label{font-size:14px;font-weight:500;display:block;margin-bottom:3px}
+.cc-sub{font-size:12px;color:var(--muted)}
+.choice-card.selected .cc-sub{color:rgba(255,255,255,.6)}
+
+.budget-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.budget-btn{border:1.5px solid var(--border);padding:1.25rem 1rem;cursor:pointer;transition:all .25s;background:transparent;text-align:center;font-family:var(--sans)}
+.budget-btn:hover{border-color:var(--terra)}
+.budget-btn.selected{border-color:var(--charcoal);background:var(--charcoal);color:#fff}
+.budget-amount{display:block;font-family:var(--serif);font-size:22px;font-weight:300;margin-bottom:3px}
+.budget-label{display:block;font-size:12px;color:var(--muted)}
+.budget-btn.selected .budget-label{color:rgba(255,255,255,.6)}
+
+.step-nav{display:flex;justify-content:space-between;align-items:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border-light)}
+.btn-next{background:var(--charcoal);color:#fff;border:none;padding:13px 28px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .3s;font-family:var(--sans)}
+.btn-next:hover{background:var(--terra)}
+.btn-next:disabled{background:var(--border);cursor:not-allowed}
+.btn-back{background:transparent;border:1.5px solid var(--border);color:var(--muted);padding:13px 22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:var(--sans)}
+.btn-back:hover{border-color:var(--ink);color:var(--ink)}
+
+/* RESULTS */
+#results{display:none}
+.results-header{text-align:center;padding:3rem 2.5rem;border-bottom:1px solid var(--border-light)}
+.results-header h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:300;color:var(--charcoal);margin-bottom:.5rem}
+.results-header p{font-size:15px;color:var(--muted)}
+.results-grid{max-width:1100px;margin:0 auto;padding:3rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.result-card{border:1px solid var(--border-light);background:#fff;overflow:hidden}
+.result-card.featured{border:2px solid var(--terra)}
+.result-badge{background:var(--terra);color:#fff;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;text-align:center}
+.result-img{aspect-ratio:4/3;overflow:hidden}
+.result-img-inner{width:100%;height:100%;transition:transform .5s var(--ease)}
+.result-card:hover .result-img-inner{transform:scale(1.04)}
+.result-body{padding:1.25rem}
+.result-body h3{font-size:16px;font-weight:500;margin-bottom:4px}
+.result-body .mat{font-size:12px;color:var(--muted);margin-bottom:.75rem}
+.result-body .why{font-size:13px;color:var(--ink);line-height:1.6;margin-bottom:.75rem;background:var(--sage-light);padding:.6rem .75rem}
+.result-foot{display:flex;align-items:center;justify-content:space-between;margin-top:.75rem}
+.result-price{font-size:16px;font-weight:500}
+.result-add{background:var(--charcoal);color:#fff;border:none;padding:9px 18px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s;font-family:var(--sans)}
+.result-add:hover{background:var(--terra)}
+.results-reset{text-align:center;padding:1rem 2.5rem 4rem}
+.reset-btn{background:transparent;border:1.5px solid var(--border);color:var(--muted);padding:12px 24px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);transition:all .2s}
+.reset-btn:hover{border-color:var(--ink);color:var(--ink)}
+
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--charcoal);color:#fff;padding:12px 24px;font-size:13px;z-index:900;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
+.fg{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.fl{font-family:var(--serif);font-size:22px;font-weight:300;margin-bottom:.75rem}.fl em{color:var(--terra);font-style:italic}
+.fp2{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;max-width:260px;margin-bottom:1.5rem}
+.fc h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1.25rem}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fc li{font-size:13px;color:rgba(255,255,255,.5)}
+.fb{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fleg p{font-size:12px;color:rgba(255,255,255,.3)}.fleg a{color:rgba(255,255,255,.35);text-decoration:underline}
+.fkvk{font-size:11px;color:rgba(255,255,255,.2);margin-top:6px}
+
+@media(max-width:768px){nav{padding:0 1.25rem}.nav-links{display:none}.choice-grid{grid-template-columns:1fr 1fr}.budget-grid{grid-template-columns:1fr 1fr}.results-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="location.href='index.html'">Terra<em>Verde</em></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Shop</a></li>
+    <li><a href="sustainability.html">Sustainability</a></li>
+    <li><a href="our-story.html">Our Story</a></li>
+    <li><a href="blog.html">Journal</a></li>
+    <li><a href="gift-finder.html">Gift Finder</a></li>
+  </ul>
+  <div style="display:flex;gap:1rem">
+    <button class="icon-btn"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+  </div>
+</nav>
+
+<section class="gf-hero">
+  <span class="gf-hero-eye">Gift Finder</span>
+  <h1>The perfect <em>sustainable gift</em><br>in 30 seconds.</h1>
+  <p>Answer three questions and we'll match you with exactly the right TerraVerde gift — beautifully packaged, plastic-free, and made to last.</p>
+</section>
+
+<div class="finder" id="finder">
+  <div class="finder-progress">
+    <div class="progress-step active" id="prog-1">Who is it for?</div>
+    <div class="progress-step" id="prog-2">What's the occasion?</div>
+    <div class="progress-step" id="prog-3">What's your budget?</div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step active" id="step-1">
+    <h2 class="step-q">Who are you shopping for?</h2>
+    <p class="step-sub">Select all that apply</p>
+    <div class="choice-grid">
+      <div class="choice-card" onclick="toggle(this,'who')"><span class="cc-icon">👩</span><span class="cc-label">Partner</span><span class="cc-sub">Romantic or intimate gift</span></div>
+      <div class="choice-card" onclick="toggle(this,'who')"><span class="cc-icon">👨‍👩‍👧</span><span class="cc-label">Family</span><span class="cc-sub">Parent, sibling or in-law</span></div>
+      <div class="choice-card" onclick="toggle(this,'who')"><span class="cc-icon">👯</span><span class="cc-label">Friend</span><span class="cc-sub">Bestie or close friend</span></div>
+      <div class="choice-card" onclick="toggle(this,'who')"><span class="cc-icon">🏠</span><span class="cc-label">New homeowner</span><span class="cc-sub">Housewarming or moving in</span></div>
+      <div class="choice-card" onclick="toggle(this,'who')"><span class="cc-icon">💼</span><span class="cc-label">Colleague</span><span class="cc-sub">Team or client gift</span></div>
+      <div class="choice-card" onclick="toggle(this,'who')"><span class="cc-icon">🛍️</span><span class="cc-label">Myself</span><span class="cc-sub">Treat yourself</span></div>
+    </div>
+    <div class="step-nav">
+      <div></div>
+      <button class="btn-next" onclick="nextStep(2)">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step" id="step-2">
+    <h2 class="step-q">What's the occasion?</h2>
+    <p class="step-sub">Pick the one that fits best</p>
+    <div class="choice-grid">
+      <div class="choice-card" onclick="selectOne(this,'occ')"><span class="cc-icon">🎂</span><span class="cc-label">Birthday</span></div>
+      <div class="choice-card" onclick="selectOne(this,'occ')"><span class="cc-icon">💍</span><span class="cc-label">Wedding or anniversary</span></div>
+      <div class="choice-card" onclick="selectOne(this,'occ')"><span class="cc-icon">🌷</span><span class="cc-label">Mother's Day</span></div>
+      <div class="choice-card" onclick="selectOne(this,'occ')"><span class="cc-icon">🎄</span><span class="cc-label">Christmas / Sinterklaas</span></div>
+      <div class="choice-card" onclick="selectOne(this,'occ')"><span class="cc-icon">🏠</span><span class="cc-label">Housewarming</span></div>
+      <div class="choice-card" onclick="selectOne(this,'occ')"><span class="cc-icon">🎁</span><span class="cc-label">Just because</span></div>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goStep(1)">← Back</button>
+      <button class="btn-next" onclick="nextStep(3)">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step" id="step-3">
+    <h2 class="step-q">What's your budget?</h2>
+    <p class="step-sub">All gifts include free premium packaging</p>
+    <div class="budget-grid">
+      <button class="budget-btn" onclick="selectBudget(this,'under30')"><span class="budget-amount">Under €30</span><span class="budget-label">Small treat</span></button>
+      <button class="budget-btn" onclick="selectBudget(this,'30-60')"><span class="budget-amount">€30 – €60</span><span class="budget-label">Classic gift</span></button>
+      <button class="budget-btn" onclick="selectBudget(this,'60-100')"><span class="budget-amount">€60 – €100</span><span class="budget-label">Generous gift</span></button>
+      <button class="budget-btn" onclick="selectBudget(this,'100plus')"><span class="budget-amount">€100+</span><span class="budget-label">Luxury gift</span></button>
+    </div>
+    <div class="step-nav">
+      <button class="btn-back" onclick="goStep(2)">← Back</button>
+      <button class="btn-next" id="find-btn" onclick="showResults()" disabled>Find my gift →</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="results">
+  <div class="results-header">
+    <h2>Your perfect matches</h2>
+    <p id="results-sub">Three gifts curated just for you — all sustainably made, beautifully packaged.</p>
+  </div>
+  <div class="results-grid" id="results-grid"></div>
+  <div class="results-reset">
+    <button class="reset-btn" onclick="reset()">← Start over</button>
+  </div>
+</div>
+
+<footer>
+  <div class="fg">
+    <div><div class="fl">Terra<em>Verde</em></div><p class="fp2">Sustainable home products & accessories, made by artisans who care. Designed in Amsterdam.</p></div>
+    <div class="fc"><h4>Shop</h4><ul><li><a href="index.html#products" style="color:inherit">Tabletop</a></li><li><a href="index.html#products" style="color:inherit">Accessories</a></li><li><a href="index.html#products" style="color:inherit">Home Décor</a></li><li><a href="gift-finder.html" style="color:inherit">Gift Sets</a></li></ul></div>
+    <div class="fc"><h4>Company</h4><ul><li><a href="our-story.html" style="color:inherit">Our Story</a></li><li><a href="sustainability.html" style="color:inherit">Sustainability</a></li><li><a href="blog.html" style="color:inherit">Journal</a></li><li><a href="wholesale.html" style="color:inherit">Wholesale</a></li></ul></div>
+    <div class="fc"><h4>Help</h4><ul><li><a href="wholesale.html#contact" style="color:inherit">FAQ</a></li><li><a href="wholesale.html#contact" style="color:inherit">Shipping</a></li><li><a href="blog.html" style="color:inherit">Care Guide</a></li><li><a href="wholesale.html#contact" style="color:inherit">Contact</a></li></ul></div>
+  </div>
+  <div class="fb">
+    <div class="fleg"><p>© 2026 TerraVerde · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p><p class="fkvk">TerraVerde B.V. · KvK: 87654321 · VAT: NL864213579B01</p></div>
+  </div>
+</footer>
+<div class="toast" id="t"></div>
+
+<script>
+const GIFTS = [
+  {name:'Sage Linen Placemat Set',mat:'Belgian linen · Set of 4',price:'€38',bg:'linear-gradient(145deg,#c8d4c2,#5C7A5E)',budget:['under30','30-60'],why:'A daily-use gift that gets more beautiful with every wash.',featured:false},
+  {name:'Terracotta Jute Handbag',mat:'Natural jute & cotton lining',price:'€65',bg:'linear-gradient(145deg,#dfc9bc,#B85C38)',budget:['30-60','60-100'],why:'The bag they\'ll carry every day and get compliments on.',featured:true},
+  {name:'Forest Organic Throw',mat:'Organic cotton & wool, 130×170cm',price:'€95',bg:'linear-gradient(145deg,#b8cdb5,#3A5A3C)',budget:['60-100','100plus'],why:'The kind of luxury gift that stays on the sofa for years.',featured:false},
+  {name:'Artisan Home Gift Set',mat:'Placemat, napkins & pouch',price:'€85',bg:'linear-gradient(145deg,#c8d4c2,#3A5A3C)',budget:['60-100','100plus'],why:'A complete table-setting gift — curated, boxed and ready to give.',featured:true},
+  {name:'Quilted Linen Pouch',mat:'Quilted linen with zip',price:'€22',bg:'linear-gradient(145deg,#c8cdd4,#5A6A7A)',budget:['under30'],why:'A small but beautiful everyday essential — perfect for a thoughtful add-on.',featured:false},
+  {name:'Serenity Home Bundle',mat:'Throw + 2 cushion covers',price:'€145',bg:'linear-gradient(145deg,#c2d0c4,#3A5A3C)',budget:['100plus'],why:'For someone who deserves the full luxury sustainable home experience.',featured:true},
+  {name:'Olive Linen Napkin Set',mat:'Softened European linen · Set of 4',price:'€28',bg:'linear-gradient(145deg,#c5d0c7,#5C7A5E)',budget:['under30','30-60'],why:'An elegant, practical gift for anyone who loves a beautiful table.',featured:false},
+  {name:'Woven Seagrass Basket',mat:'Natural seagrass, Ø30cm',price:'€55',bg:'linear-gradient(145deg,#d8c9a8,#9A8050)',budget:['30-60','60-100'],why:'A home staple that looks like a considered design choice.',featured:false},
+];
+
+let budget = null;
+
+function toggle(el, group) { el.classList.toggle('selected'); }
+function selectOne(el, group) {
+  document.querySelectorAll(`#step-2 .choice-card`).forEach(c=>c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function selectBudget(el, val) {
+  document.querySelectorAll('.budget-btn').forEach(b=>b.classList.remove('selected'));
+  el.classList.add('selected');
+  budget = val;
+  document.getElementById('find-btn').disabled = false;
+}
+function nextStep(n) { goStep(n); }
+function goStep(n) {
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('step-'+n).classList.add('active');
+  document.querySelectorAll('.progress-step').forEach((p,i)=>{
+    p.classList.remove('active','done');
+    if(i+1<n) p.classList.add('done');
+    else if(i+1===n) p.classList.add('active');
+  });
+}
+function showResults() {
+  if(!budget) return;
+  const matches = GIFTS.filter(g => g.budget.includes(budget));
+  const show = matches.length >= 3 ? matches.slice(0,3) : [...matches, ...GIFTS.filter(g=>!matches.includes(g))].slice(0,3);
+  document.getElementById('finder').style.display = 'none';
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results-grid').innerHTML = show.map((g,i) => `
+    <div class="result-card ${g.featured?'featured':''}">
+      ${g.featured?'<div class="result-badge">Best match</div>':''}
+      <div class="result-img"><div class="result-img-inner" style="background:${g.bg}"></div></div>
+      <div class="result-body">
+        <h3>${g.name}</h3>
+        <div class="mat">${g.mat}</div>
+        <div class="why">"${g.why}"</div>
+        <div class="result-foot">
+          <span class="result-price">${g.price}</span>
+          <button class="result-add" onclick="toast('Added to basket ✓')">Add to basket</button>
+        </div>
+      </div>
+    </div>`).join('');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function reset() {
+  budget=null;
+  document.querySelectorAll('.choice-card,.budget-btn').forEach(el=>el.classList.remove('selected'));
+  document.getElementById('find-btn').disabled=true;
+  document.getElementById('finder').style.display='block';
+  document.getElementById('results').style.display='none';
+  goStep(1);
+}
+function toast(msg){
+  const t=document.getElementById('t');
+  t.textContent=msg;t.classList.add('show');
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2400);
+}
+</script>
+</body>
+</html>

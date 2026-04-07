@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Story — TerraVerde | Made with Purpose</title>
+<meta name="description" content="How TerraVerde began — a founder's love of natural materials, a grandmother's kitchen table, and a commitment to making beautiful things responsibly.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#F8F4EE;--cream-deep:#F0EAE0;--terra:#B85C38;--terra-light:#F2E4DC;--sage:#5C7A5E;--sage-light:#DDE8DE;--forest:#2A3D2C;--charcoal:#1C1C1A;--ink:#2E2C28;--muted:#6E6860;--border:#DDD8D0;--border-light:#EDE9E2;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--ease:cubic-bezier(.25,.46,.45,.94)}
+html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+nav{background:var(--cream);border-bottom:1px solid var(--border-light);position:sticky;top:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem}
+.logo{font-family:var(--serif);font-size:22px;font-weight:400;cursor:pointer}.logo em{color:var(--terra);font-style:italic}
+.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{font-size:13px;letter-spacing:.04em;color:var(--muted)}.nav-links a.on{color:var(--ink)}
+.icon-btn{background:none;border:none;padding:8px;cursor:pointer;display:flex;align-items:center}.icon-btn svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.5}
+
+/* HERO */
+.story-hero{display:grid;grid-template-columns:1fr 1fr;min-height:80vh}
+.sh-left{background:var(--forest);color:#fff;padding:8rem 4rem 6rem;display:flex;flex-direction:column;justify-content:flex-end}
+.sh-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:2rem;display:block}
+.sh-left h1{font-family:var(--serif);font-size:clamp(40px,4.5vw,62px);font-weight:300;line-height:1.15;margin-bottom:1.5rem}
+.sh-left h1 em{font-style:italic;color:rgba(184,92,56,.8)}
+.sh-left p{font-size:16px;color:rgba(255,255,255,.6);line-height:1.8;max-width:420px}
+.sh-right{display:grid;grid-template-rows:1fr 1fr}
+.sh-img-top{background:linear-gradient(145deg,#dfc9bc,#B85C38);overflow:hidden}
+.sh-img-top-inner{width:100%;height:100%;transition:transform .6s var(--ease)}
+.sh-img-top:hover .sh-img-top-inner{transform:scale(1.04)}
+.sh-img-bot{background:linear-gradient(145deg,#c8d4c2,#3A5A3C);overflow:hidden}
+.sh-img-bot-inner{width:100%;height:100%;transition:transform .6s var(--ease)}
+.sh-img-bot:hover .sh-img-bot-inner{transform:scale(1.04)}
+
+/* VALUES */
+.values-section{padding:6rem 2.5rem;max-width:1000px;margin:0 auto;text-align:center}
+.values-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:1rem}
+.values-h2{font-family:var(--serif);font-size:clamp(30px,4vw,50px);font-weight:300;color:var(--charcoal);margin-bottom:1.25rem}
+.values-intro{font-size:16px;color:var(--muted);line-height:1.85;margin-bottom:4rem}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.value-item{text-align:left}
+.value-num{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--border);line-height:1;margin-bottom:.75rem}
+.value-item h3{font-size:16px;font-weight:500;margin-bottom:.5rem}
+.value-item p{font-size:14px;color:var(--muted);line-height:1.65}
+
+/* FOUNDER */
+.founder-section{background:var(--cream-deep);padding:6rem 2.5rem}
+.founder-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 3fr;gap:5rem;align-items:center}
+.founder-portrait{aspect-ratio:3/4;background:linear-gradient(160deg,#d8d4cc 0%,#6E6254 100%);position:relative}
+.founder-portrait-caption{position:absolute;bottom:0;left:0;right:0;background:var(--charcoal);padding:1.25rem;color:#fff}
+.founder-portrait-caption strong{display:block;font-size:15px;margin-bottom:2px}
+.founder-portrait-caption span{font-size:12px;color:rgba(255,255,255,.5)}
+.founder-text{}
+.founder-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.founder-eye::after{content:'';flex:1;height:1px;background:var(--border)}
+.founder-text h2{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:300;color:var(--charcoal);margin-bottom:1.5rem;line-height:1.25}
+.founder-text p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:1.25rem}
+.founder-quote{border-left:3px solid var(--terra);padding:1.25rem 1.5rem;margin:1.5rem 0;font-family:var(--serif);font-size:20px;font-weight:300;font-style:italic;color:var(--charcoal);line-height:1.6}
+.founder-sig{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--terra);margin-top:1.5rem}
+
+/* TIMELINE */
+.timeline-section{padding:6rem 2.5rem;max-width:800px;margin:0 auto}
+.timeline-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:flex;align-items:center;gap:10px;margin-bottom:.75rem}
+.timeline-eye::after{content:'';flex:1;height:1px;background:var(--border)}
+.timeline-h2{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:300;color:var(--charcoal);margin-bottom:3rem}
+.tl{display:flex;flex-direction:column;gap:0}
+.tl-item{display:grid;grid-template-columns:80px 1fr;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--border-light)}
+.tl-item:last-child{border-bottom:none}
+.tl-year{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--terra);line-height:1}
+.tl-content h4{font-size:15px;font-weight:500;margin-bottom:.4rem}
+.tl-content p{font-size:14px;color:var(--muted);line-height:1.65}
+
+/* ARTISANS */
+.artisans-section{background:var(--forest);color:#fff;padding:6rem 2.5rem}
+.artisans-inner{max-width:1100px;margin:0 auto}
+.art-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:10px;margin-bottom:.75rem}
+.art-eye::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.1)}
+.art-h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;margin-bottom:.75rem}
+.art-sub{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:3rem;max-width:560px}
+.artisan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.artisan-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.artisan-img{aspect-ratio:4/3}
+.ai1{background:linear-gradient(145deg,#c8d4c2,#3A5A3C)}
+.ai2{background:linear-gradient(145deg,#dfc9bc,#8C3E22)}
+.ai3{background:linear-gradient(145deg,#d4ccc0,#6E5A40)}
+.artisan-body{padding:1.25rem}
+.artisan-body h3{font-size:16px;font-weight:400;margin-bottom:4px}
+.artisan-body .loc{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:.75rem;display:flex;align-items:center;gap:4px}
+.artisan-body p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6}
+
+/* CTA */
+.story-cta{padding:6rem 2.5rem;text-align:center;background:var(--terra-light)}
+.story-cta h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:300;color:var(--charcoal);margin-bottom:.75rem}
+.story-cta p{font-size:15px;color:var(--muted);margin-bottom:2rem}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-d{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid;cursor:pointer;font-family:var(--sans);transition:all .3s}
+.btn-d.dark{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}.btn-d.dark:hover{background:var(--terra);border-color:var(--terra)}
+.btn-d.out{background:transparent;color:var(--ink);border-color:var(--border)}.btn-d.out:hover{border-color:var(--ink)}
+
+footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
+.fg{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.fl{font-family:var(--serif);font-size:22px;font-weight:300;margin-bottom:.75rem}.fl em{color:var(--terra);font-style:italic}
+.fp2{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;max-width:260px;margin-bottom:1.5rem}
+.fc h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1.25rem}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fc li{font-size:13px;color:rgba(255,255,255,.5)}
+.fb{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fleg p{font-size:12px;color:rgba(255,255,255,.3)}.fleg a{color:rgba(255,255,255,.35);text-decoration:underline}
+.fkvk{font-size:11px;color:rgba(255,255,255,.2);margin-top:6px}
+
+@media(max-width:900px){.story-hero{grid-template-columns:1fr;min-height:auto}.sh-right{grid-template-rows:none;grid-template-columns:1fr 1fr;min-height:300px}.founder-inner{grid-template-columns:1fr}.artisan-grid{grid-template-columns:1fr 1fr}.values-grid{grid-template-columns:1fr}}
+@media(max-width:768px){nav{padding:0 1.25rem}.nav-links{display:none}.fg{grid-template-columns:1fr 1fr}.sh-left{padding:4rem 1.5rem 3rem}.artisan-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="location.href='index.html'">Terra<em>Verde</em></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Shop</a></li>
+    <li><a href="sustainability.html">Sustainability</a></li>
+    <li><a href="our-story.html" class="on">Our Story</a></li>
+    <li><a href="blog.html">Journal</a></li>
+    <li><a href="gift-finder.html">Gift Finder</a></li>
+  </ul>
+  <div style="display:flex;gap:1rem">
+    <button class="icon-btn"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+  </div>
+</nav>
+
+<section class="story-hero">
+  <div class="sh-left">
+    <span class="sh-eye">Our story</span>
+    <h1>Made with purpose,<br><em>worn with pride.</em></h1>
+    <p>TerraVerde began with a linen tablecloth, a grandmother's kitchen, and a question: why does beautiful design have to harm the world that inspires it?</p>
+  </div>
+  <div class="sh-right">
+    <div class="sh-img-top"><div class="sh-img-top-inner"></div></div>
+    <div class="sh-img-bot"><div class="sh-img-bot-inner"></div></div>
+  </div>
+</section>
+
+<section class="values-section">
+  <span class="values-eye">What we stand for</span>
+  <h2 class="values-h2">Three things we never compromise on</h2>
+  <p class="values-intro">From our first placemat to our thousandth order, these three principles guide every decision we make — about materials, production, pricing and partnerships.</p>
+  <div class="values-grid">
+    <div class="value-item"><div class="value-num">01</div><h3>Honest materials</h3><p>If we can't trace it to its source and vouch for it, it doesn't go into our products. No exceptions, no compromises, no greenwashing.</p></div>
+    <div class="value-item"><div class="value-num">02</div><h3>People first</h3><p>The artisans who make our products deserve more than a fair wage — they deserve respect, stability and pride in what they create. We pay 35% above minimum.</p></div>
+    <div class="value-item"><div class="value-num">03</div><h3>Beauty that lasts</h3><p>We design for decades, not seasons. A TerraVerde placemat should still be on your table in 2040. If it wears out before then, we'll fix it.</p></div>
+  </div>
+</section>
+
+<section class="founder-section">
+  <div class="founder-inner">
+    <div>
+      <div class="founder-portrait">
+        <div style="width:100%;height:100%;min-height:440px;background:linear-gradient(160deg,#d8d4cc,#6E6254)"></div>
+        <div class="founder-portrait-caption"><strong>Emma de Vries</strong><span>Founder & Creative Director, TerraVerde</span></div>
+      </div>
+    </div>
+    <div class="founder-text">
+      <div class="founder-eye">The founder</div>
+      <h2>From a linen tablecloth to a brand built on conviction</h2>
+      <p>I grew up watching my grandmother lay the table every Sunday with the same set of linen placemats she'd had since the 1970s. They were soft, faded in all the right places, and more beautiful for every wash. That table taught me that the best things don't wear out — they wear in.</p>
+      <p>In 2021, after years working in sustainable fashion, I looked at the homeware market and saw the same problem I'd seen in clothing: beautiful design and genuine responsibility were treated as opposites. Either you bought fast, cheap, synthetic, or you paid a premium for something that claimed to be sustainable but couldn't prove it.</p>
+      <div class="founder-quote">"I wanted to make something my grandmother would have bought — and kept for fifty years."</div>
+      <p>TerraVerde launched in 2022 with twelve products, a waiting list and a very clear commitment: every claim we make about sustainability will be independently certified, every person who makes our products will be fairly paid, and every product we sell will be worth keeping forever.</p>
+      <p>We're still small. We still visit every workshop ourselves. And we still lay our own tables with TerraVerde every morning.</p>
+      <div class="founder-sig">Emma de Vries</div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="timeline-eye">How we got here</div>
+  <h2 class="timeline-h2">The TerraVerde journey</h2>
+  <div class="tl">
+    <div class="tl-item"><div class="tl-year">2021</div><div class="tl-content"><h4>The idea takes root</h4><p>Emma de Vries begins sourcing sustainable linen from Belgian mills and visiting artisan workshops in Jaipur. The concept for TerraVerde is written on a napkin.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2022</div><div class="tl-content"><h4>Launch with 12 products</h4><p>TerraVerde goes live with a range of linen placemats, napkins and one jute bag. The first 200 orders sell out in 3 weeks. The waiting list begins.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2023</div><div class="tl-content"><h4>GOTS and OEKO-TEX certification</h4><p>After 18 months of working towards it, TerraVerde receives GOTS certification across all cotton and linen products, and OEKO-TEX® Standard 100 for dyes.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2024</div><div class="tl-content"><h4>The take-back programme launches</h4><p>We introduce our circular take-back service — the first of its kind in the Dutch sustainable homeware market. 140 products returned and upcycled in year one.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2025</div><div class="tl-content"><h4>2,847 homes and counting</h4><p>We pass 2,000 customers, add Portuguese linen artisans as production partners, and eliminate the last traces of plastic from our packaging and supply chain.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2026</div><div class="tl-content"><h4>Next chapter</h4><p>New collections, B2B partnerships with conscious restaurants and hotels, and a seasonal subscription box launching later this year. The table keeps getting longer.</p></div></div>
+  </div>
+</section>
+
+<section class="artisans-section">
+  <div class="artisans-inner">
+    <div class="art-eye">The people behind every product</div>
+    <h2 class="art-h2">Our artisan partners</h2>
+    <p class="art-sub">We work with 14 family workshops across India and Portugal. These are not anonymous factories — they are people we know by name, visit in person and are proud to call partners.</p>
+    <div class="artisan-grid">
+      <div class="artisan-card">
+        <div class="artisan-img ai1"></div>
+        <div class="artisan-body">
+          <h3>The Sharma Workshop</h3>
+          <div class="loc">📍 Jaipur, India · Est. 1978</div>
+          <p>Three generations of textile weavers. Ravi Sharma and his daughters make all of our linen placemats and napkins. They've been weaving together since Ravi was eight years old.</p>
+        </div>
+      </div>
+      <div class="artisan-card">
+        <div class="artisan-img ai2"></div>
+        <div class="artisan-body">
+          <h3>Casa Textil Alentejo</h3>
+          <div class="loc">📍 Évora, Portugal · Est. 1991</div>
+          <p>Maria and her team of twelve weavers specialise in heavy stonewashed linen. Their workshop in Évora has been supplying European home brands for over 30 years.</p>
+        </div>
+      </div>
+      <div class="artisan-card">
+        <div class="artisan-img ai3"></div>
+        <div class="artisan-body">
+          <h3>The Gupta Jute Collective</h3>
+          <div class="loc">📍 Kolkata, India · Est. 2003</div>
+          <p>A women-led cooperative of 22 artisans who hand-weave all of our jute and seagrass products. TerraVerde is their largest and longest-standing partner.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story-cta">
+  <h2>Want to know more?</h2>
+  <p>Read about our sustainability commitments in detail, or explore the products made by the people you just met.</p>
+  <div class="cta-btns">
+    <a href="sustainability.html" class="btn-d dark">Our sustainability page →</a>
+    <a href="index.html#products" class="btn-d out">Shop the collection</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fg">
+    <div><div class="fl">Terra<em>Verde</em></div><p class="fp2">Sustainable home products & accessories, made by artisans who care. Designed in Amsterdam.</p></div>
+    <div class="fc"><h4>Shop</h4><ul><li><a href="index.html#products" style="color:inherit">Tabletop</a></li><li><a href="index.html#products" style="color:inherit">Accessories</a></li><li><a href="index.html#products" style="color:inherit">Home Décor</a></li><li><a href="gift-finder.html" style="color:inherit">Gift Sets</a></li></ul></div>
+    <div class="fc"><h4>Company</h4><ul><li><a href="our-story.html" style="color:inherit">Our Story</a></li><li><a href="sustainability.html" style="color:inherit">Sustainability</a></li><li><a href="blog.html" style="color:inherit">Journal</a></li><li><a href="wholesale.html" style="color:inherit">Wholesale</a></li></ul></div>
+    <div class="fc"><h4>Help</h4><ul><li><a href="wholesale.html#contact" style="color:inherit">FAQ</a></li><li><a href="wholesale.html#contact" style="color:inherit">Shipping</a></li><li><a href="blog.html" style="color:inherit">Care Guide</a></li><li><a href="wholesale.html#contact" style="color:inherit">Contact</a></li></ul></div>
+  </div>
+  <div class="fb">
+    <div class="fleg"><p>© 2026 TerraVerde · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p><p class="fkvk">TerraVerde B.V. · KvK: 87654321 · VAT: NL864213579B01 · Herengracht 182, Amsterdam</p></div>
+  </div>
+</footer>
+</body>
+</html>

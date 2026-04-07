@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TerraVerde | Duurzame Linnen Placemats, Handtassen & Woonaccessoires</title>
+<meta name="description" content="Ambachtelijk gemaakte duurzame woonproducten van natuurlijk linnen, jute en katoen. Placemats, handtassen en interieur — eerlijk gemaakt, plasticvrije verzending vanuit Nederland.">
+<meta property="og:title" content="TerraVerde | Sustainable Home & Accessories">
+<meta property="og:description" content="Artisan-made sustainable home products. Placemats, handbags & décor crafted from natural linen, jute and cotton.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.terraverde.nl">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"TerraVerde",
+  "url":"https://www.terraverde.nl",
+  "logo":"https://www.terraverde.nl/logo.png",
+  "description":"Sustainable artisan-made home products crafted from natural fibres",
+  "address":{"@type":"PostalAddress","addressLocality":"Amsterdam","addressCountry":"NL"},
+  "contactPoint":{"@type":"ContactPoint","email":"hallo@terraverde.nl","contactType":"customer service"}
+}
+</script>
+<style>
+/* ── RESET & BASE ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F8F4EE;
+  --cream-deep:#F0EAE0;
+  --linen:#E8E0D2;
+  --stone:#C8BFAF;
+  --stone-mid:#A09080;
+  --terra:#B85C38;
+  --terra-light:#F2E4DC;
+  --terra-dark:#8C3E22;
+  --sage:#5C7A5E;
+  --sage-light:#DDE8DE;
+  --sage-dark:#3A5A3C;
+  --forest:#2A3D2C;
+  --charcoal:#1C1C1A;
+  --ink:#2E2C28;
+  --muted:#6E6860;
+  --border:#DDD8D0;
+  --border-light:#EDE9E2;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',-apple-system,sans-serif;
+  --transition:cubic-bezier(.25,.46,.45,.94);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans)}
+
+/* ── COOKIE BANNER ── */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--charcoal);color:#fff;padding:1rem 2rem;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;transform:translateY(100%);transition:transform .4s var(--transition)}
+#cookie-banner.visible{transform:translateY(0)}
+#cookie-banner p{font-size:13px;opacity:.8;flex:1;min-width:200px}
+#cookie-banner p a{color:var(--stone);text-decoration:underline}
+.cookie-btns{display:flex;gap:8px;flex-shrink:0}
+.cookie-btn{padding:8px 18px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans)}
+.cookie-btn.accept{background:var(--sage);color:#fff}
+.cookie-btn.decline{background:rgba(255,255,255,.1);color:#fff}
+
+/* ── ANNOUNCE BAR ── */
+#announce-bar{background:var(--forest);color:#fff;height:36px;overflow:hidden;position:relative}
+.announce-track{display:flex;animation:ticker 22s linear infinite;white-space:nowrap}
+.announce-track:hover{animation-play-state:paused}
+.announce-item{display:inline-flex;align-items:center;height:36px;padding:0 3rem;font-size:12px;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0}
+.announce-dot{width:3px;height:3px;border-radius:50%;background:var(--terra);margin:0 1.5rem;flex-shrink:0}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── NAV ── */
+nav{background:var(--cream);border-bottom:1px solid var(--border-light);position:sticky;top:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
+.nav-logo-mark{width:28px;height:28px;flex-shrink:0}
+.nav-logo-text{font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:.02em;color:var(--charcoal)}
+.nav-logo-text em{color:var(--terra);font-style:italic}
+.nav-center{display:flex;gap:2rem;list-style:none}
+.nav-center a{font-size:13px;letter-spacing:.04em;color:var(--muted);transition:color .2s;position:relative;padding-bottom:2px}
+.nav-center a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--terra);transition:width .3s var(--transition)}
+.nav-center a:hover{color:var(--ink)}
+.nav-center a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-btn{background:none;border:none;padding:8px;color:var(--ink);display:flex;align-items:center;justify-content:center;position:relative;transition:opacity .2s}
+.nav-btn:hover{opacity:.7}
+.nav-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5}
+.cart-count{position:absolute;top:2px;right:2px;background:var(--terra);color:#fff;border-radius:50%;width:15px;height:15px;font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:500}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .3s var(--transition)}
+
+/* ── MOBILE NAV ── */
+#mobile-nav{position:fixed;inset:0;background:var(--cream);z-index:300;transform:translateX(100%);transition:transform .4s var(--transition);display:flex;flex-direction:column;padding:2rem}
+#mobile-nav.open{transform:translateX(0)}
+.mobile-nav-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem}
+.mobile-nav-close{background:none;border:none;font-size:24px;color:var(--ink);line-height:1}
+.mobile-nav-links{display:flex;flex-direction:column;gap:0}
+.mobile-nav-links a{font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ink);padding:0.6rem 0;border-bottom:1px solid var(--border-light);display:block;transition:color .2s}
+.mobile-nav-links a:hover{color:var(--terra)}
+.mobile-nav-bottom{margin-top:auto;font-size:13px;color:var(--muted)}
+
+/* ── HERO ── */
+.hero{min-height:calc(100vh - 104px);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hero-left{padding:5rem 3rem 5rem 5vw;display:flex;flex-direction:column;justify-content:center;background:var(--cream)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-bottom:2rem}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--terra)}
+.hero h1{font-family:var(--serif);font-size:clamp(48px,5.5vw,80px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero-sub{font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:2.5rem;max-width:400px}
+.hero-cta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--charcoal);color:#fff;padding:14px 28px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--charcoal);transition:all .3s var(--transition)}
+.btn-primary:hover{background:var(--terra);border-color:var(--terra)}
+.btn-primary svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2;transition:transform .3s}
+.btn-primary:hover svg{transform:translateX(4px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink);padding:14px 28px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--border);transition:all .3s}
+.btn-ghost:hover{border-color:var(--ink)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding-top:2.5rem;border-top:1px solid var(--border-light)}
+.hero-stat strong{display:block;font-family:var(--serif);font-size:30px;font-weight:300;color:var(--charcoal);margin-bottom:2px}
+.hero-stat span{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.hero-right{background:var(--cream-deep);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px;overflow:hidden}
+.hero-img{overflow:hidden;cursor:pointer}
+.hero-img-inner{width:100%;height:100%;transition:transform .6s var(--transition);display:flex;align-items:flex-end;padding:1.5rem}
+.hero-img:hover .hero-img-inner{transform:scale(1.05)}
+.hero-img:nth-child(1) .hero-img-inner{background:linear-gradient(160deg,#c8d4c2 0%,#7A9A7E 100%)}
+.hero-img:nth-child(2) .hero-img-inner{background:linear-gradient(160deg,#e2cfc3 0%,#B85C38 100%)}
+.hero-img:nth-child(3) .hero-img-inner{background:linear-gradient(160deg,#dddbd5 0%,#9A9080 100%)}
+.hero-img:nth-child(4) .hero-img-inner{background:linear-gradient(160deg,#c5d0c7 0%,#5C7A5E 100%)}
+.hero-img-label{color:rgba(255,255,255,.9);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
+/* ── CERT STRIP ── */
+.cert-strip{background:var(--forest);padding:1.2rem 2.5rem;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
+.cert-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.cert-icon{width:20px;height:20px;flex-shrink:0;opacity:.6}
+
+/* ── CATEGORY STRIP ── */
+.cat-section{padding:5rem 2.5rem}
+.cat-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
+.cat-header h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;color:var(--charcoal)}
+.cat-header a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color .2s}
+.cat-header a:hover{color:var(--terra)}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-card{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4}
+.cat-card-inner{width:100%;height:100%;display:flex;align-items:flex-end;padding:1.5rem;transition:transform .5s var(--transition)}
+.cat-card:hover .cat-card-inner{transform:scale(1.04)}
+.cat-card:nth-child(1) .cat-card-inner{background:linear-gradient(160deg,#c0cfbb 0%,#5C7A5E 100%)}
+.cat-card:nth-child(2) .cat-card-inner{background:linear-gradient(160deg,#dfc9bc 0%,#B85C38 100%)}
+.cat-card:nth-child(3) .cat-card-inner{background:linear-gradient(160deg,#d8d4cc 0%,#8A8070 100%)}
+.cat-card:nth-child(4) .cat-card-inner{background:linear-gradient(160deg,#c2cec4 0%,#3A5A3C 100%)}
+.cat-card-text h3{font-family:var(--serif);font-size:20px;font-weight:400;color:#fff;margin-bottom:3px}
+.cat-card-text p{font-size:12px;color:rgba(255,255,255,.7);letter-spacing:.02em}
+
+/* ── SECTION LABEL ── */
+.section-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:flex;align-items:center;gap:10px;margin-bottom:.75rem}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ── PRODUCTS ── */
+.products-section{padding:0 2.5rem 5rem}
+.products-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+.products-top h2{font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:300;color:var(--charcoal)}
+.filter-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+.filter-btn{padding:8px 18px;border:1px solid var(--border);background:transparent;font-size:12px;letter-spacing:.05em;color:var(--muted);border-radius:0;cursor:pointer;transition:all .25s;font-family:var(--sans)}
+.filter-btn.active,.filter-btn:hover{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
+.sort-select{padding:8px 14px;border:1px solid var(--border);background:var(--cream);font-size:12px;color:var(--muted);font-family:var(--sans);letter-spacing:.04em;cursor:pointer;outline:none}
+
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2px}
+.product-card{background:var(--cream);cursor:pointer;position:relative;group:true}
+.product-card-img{aspect-ratio:3/4;overflow:hidden;position:relative;background:var(--cream-deep)}
+.product-card-img-inner{width:100%;height:100%;transition:transform .6s var(--transition)}
+.product-card:hover .product-card-img-inner{transform:scale(1.06)}
+.product-badge{position:absolute;top:14px;left:14px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;z-index:1;font-weight:500}
+.badge-sale{background:var(--terra);color:#fff}
+.badge-new{background:var(--forest);color:#fff}
+.badge-low{background:var(--stone-mid);color:#fff}
+.product-wishlist{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.85);border:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:all .25s;z-index:1;backdrop-filter:blur(4px)}
+.product-card:hover .product-wishlist{opacity:1}
+.product-wishlist svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:1.5}
+.product-wishlist.active svg{fill:var(--terra);stroke:var(--terra)}
+.product-quick-add{position:absolute;bottom:0;left:0;right:0;background:rgba(28,28,26,.85);color:#fff;border:none;padding:12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:all .3s var(--transition);backdrop-filter:blur(4px)}
+.product-card:hover .product-quick-add{opacity:1;transform:translateY(0)}
+.product-card-body{padding:1.2rem 1.2rem 1.5rem}
+.product-rating{display:flex;align-items:center;gap:5px;margin-bottom:6px}
+.stars-sm{color:var(--terra);font-size:11px;letter-spacing:1px}
+.rating-count{font-size:11px;color:var(--muted)}
+.product-name{font-size:15px;color:var(--charcoal);margin-bottom:4px;line-height:1.4}
+.product-material{font-size:12px;color:var(--stone-mid);margin-bottom:10px}
+.product-footer{display:flex;align-items:center;justify-content:space-between}
+.product-price-group{display:flex;align-items:baseline;gap:8px}
+.price-now{font-size:15px;font-weight:500;color:var(--charcoal)}
+.price-was{font-size:12px;color:var(--stone-mid);text-decoration:line-through}
+.price-off{font-size:11px;color:var(--terra)}
+.product-colors{display:flex;gap:5px}
+.color-swatch{width:13px;height:13px;border-radius:50%;border:1.5px solid rgba(0,0,0,.1)}
+.stock-warning{font-size:11px;color:var(--terra);display:flex;align-items:center;gap:4px;margin-top:6px}
+.stock-warning::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--terra);flex-shrink:0}
+
+/* ── SUSTAINABILITY STRIP ── */
+.sustain-section{background:var(--forest);color:#fff;padding:5rem 2.5rem}
+.sustain-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.sustain-text .section-label{color:rgba(255,255,255,.4)}
+.sustain-text .section-label::after{background:rgba(255,255,255,.12)}
+.sustain-text h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:300;line-height:1.2;margin-bottom:1.5rem}
+.sustain-text p{font-size:15px;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:2rem}
+.sustain-cta{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:4px;transition:border-color .2s}
+.sustain-cta:hover{border-color:#fff}
+.sustain-pillars{display:flex;flex-direction:column;gap:1.5rem}
+.pillar-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:1.5rem;display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start}
+.pillar-icon-box{width:40px;height:40px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
+.pillar-icon-box svg{width:18px;height:18px;stroke:rgba(255,255,255,.6);fill:none;stroke-width:1.5}
+.pillar-card h4{font-size:14px;font-weight:500;margin-bottom:4px;color:#fff}
+.pillar-card p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.5}
+.sustain-scorecard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:1.5rem;margin-top:1.5rem}
+.sustain-scorecard h4{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1rem}
+.score-row-items{display:flex;flex-direction:column;gap:10px}
+.score-row-item{display:flex;align-items:center;justify-content:space-between;font-size:13px}
+.score-row-item span:first-child{color:rgba(255,255,255,.6)}
+.score-badge{font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:20px}
+.score-badge.green{background:rgba(92,122,94,.3);color:#9fc4a2}
+.score-badge.amber{background:rgba(184,92,56,.3);color:#e8a884}
+
+/* ── FEATURED ── */
+.featured-section{padding:5rem 2.5rem;background:var(--cream-deep)}
+.featured-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:5fr 4fr;gap:4rem;align-items:center}
+.featured-img-area{position:relative}
+.featured-main-img{aspect-ratio:4/5;background:linear-gradient(150deg,#c8d4c2 0%,#5C7A5E 60%,#3A5A3C 100%);overflow:hidden}
+.featured-float-img{position:absolute;bottom:-2rem;right:-2rem;width:55%;aspect-ratio:1;background:linear-gradient(150deg,#dfc9bc 0%,#B85C38 100%);border:6px solid var(--cream-deep)}
+.featured-text .section-label{margin-bottom:1rem}
+.featured-text h2{font-family:var(--serif);font-size:clamp(30px,3.5vw,48px);font-weight:300;line-height:1.2;color:var(--charcoal);margin-bottom:1rem}
+.featured-text p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:2rem}
+.material-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem}
+.material-tag{font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--border);color:var(--muted)}
+.featured-mini-products{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:2rem}
+.mini-prod{background:var(--cream);border:1px solid var(--border-light);padding:.8rem;cursor:pointer;transition:border-color .2s}
+.mini-prod:hover{border-color:var(--terra)}
+.mini-prod-img{height:70px;margin-bottom:8px}
+.mini-prod-img.mp1{background:linear-gradient(135deg,#c8d4c2,#5C7A5E)}
+.mini-prod-img.mp2{background:linear-gradient(135deg,#dfc9bc,#B85C38)}
+.mini-prod-img.mp3{background:linear-gradient(135deg,#d8d4cc,#8A8070)}
+.mini-prod-img.mp4{background:linear-gradient(135deg,#c2d4c4,#3A5A3C)}
+.mini-prod p{font-size:12px;color:var(--ink);margin-bottom:2px}
+.mini-prod span{font-size:11px;color:var(--muted)}
+
+/* ── IMPACT COUNTER ── */
+.impact-section{background:var(--terra-light);padding:3rem 2.5rem}
+.impact-inner{max-width:900px;margin:0 auto;text-align:center}
+.impact-inner .section-label{justify-content:center;margin-bottom:1rem}
+.impact-inner .section-label::after,.impact-inner .section-label::before{content:'';flex:1;height:1px;background:var(--border)}
+.impact-counters{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:2rem}
+.impact-counter strong{display:block;font-family:var(--serif);font-size:40px;font-weight:300;color:var(--terra-dark)}
+.impact-counter span{font-size:12px;color:var(--muted);letter-spacing:.04em}
+
+/* ── STORY ── */
+.story-section{padding:5rem 2.5rem;background:var(--cream)}
+.story-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.story-img-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:8px}
+.story-img{overflow:hidden}
+.story-img:nth-child(1){grid-row:span 2;background:linear-gradient(160deg,#d8d4cc 0%,#8A8070 100%);aspect-ratio:2/3}
+.story-img:nth-child(2){background:linear-gradient(160deg,#c8d4c2 0%,#5C7A5E 100%);aspect-ratio:4/3}
+.story-img:nth-child(3){background:linear-gradient(160deg,#dfc9bc 0%,#B85C38 100%);aspect-ratio:4/3}
+.story-text .section-label{margin-bottom:1rem}
+.story-text h2{font-family:var(--serif);font-size:clamp(28px,3vw,44px);font-weight:300;line-height:1.25;color:var(--charcoal);margin-bottom:1.5rem}
+.story-text p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:1.5rem}
+.cert-badges{display:flex;flex-wrap:wrap;gap:10px;margin:1.5rem 0}
+.cert-badge{border:1px solid var(--border);padding:6px 14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:6px}
+.cert-badge::before{content:'✓';color:var(--sage)}
+
+/* ── REVIEWS ── */
+.reviews-section{padding:5rem 2.5rem;background:var(--cream-deep)}
+.reviews-header{text-align:center;margin-bottom:3rem}
+.reviews-header h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;color:var(--charcoal);margin-bottom:.5rem}
+.reviews-header .avg{font-size:15px;color:var(--muted)}
+.reviews-header .avg strong{color:var(--charcoal);font-weight:500}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
+.review-card{background:var(--cream);border:1px solid var(--border-light);padding:1.75rem}
+.review-stars{color:var(--terra);font-size:13px;letter-spacing:2px;margin-bottom:1rem}
+.review-text{font-size:14px;color:var(--ink);line-height:1.7;font-style:italic;margin-bottom:1.25rem}
+.review-author{font-size:13px;color:var(--muted)}
+.review-author strong{color:var(--ink);font-weight:500;display:block}
+.review-author span{font-size:11px;opacity:.7}
+.trustpilot-note{text-align:center;margin-top:2rem;font-size:12px;color:var(--stone-mid);letter-spacing:.04em}
+.trustpilot-note a{color:var(--terra);text-decoration:underline}
+
+/* ── UGC / INSTAGRAM STRIP ── */
+.ugc-section{padding:5rem 2.5rem;background:var(--cream)}
+.ugc-header{text-align:center;margin-bottom:2.5rem}
+.ugc-header h2{font-family:var(--serif);font-size:clamp(24px,2.5vw,36px);font-weight:300;color:var(--charcoal);margin-bottom:.4rem}
+.ugc-header p{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.ugc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:3px}
+.ugc-tile{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer}
+.ugc-tile-inner{width:100%;height:100%;transition:transform .5s var(--transition)}
+.ugc-tile:hover .ugc-tile-inner{transform:scale(1.06)}
+.ugc-tile:nth-child(1) .ugc-tile-inner{background:linear-gradient(135deg,#c8d4c2,#5C7A5E)}
+.ugc-tile:nth-child(2) .ugc-tile-inner{background:linear-gradient(135deg,#dfc9bc,#B85C38)}
+.ugc-tile:nth-child(3) .ugc-tile-inner{background:linear-gradient(135deg,#d8d4cc,#8A8070)}
+.ugc-tile:nth-child(4) .ugc-tile-inner{background:linear-gradient(135deg,#c2d4c4,#3A5A3C)}
+.ugc-tile:nth-child(5) .ugc-tile-inner{background:linear-gradient(135deg,#dfc9bc,#B85C38)}
+.ugc-tile:nth-child(6) .ugc-tile-inner{background:linear-gradient(135deg,#c8d4c2,#3A5A3C)}
+.ugc-overlay{position:absolute;inset:0;background:rgba(0,0,0,.0);display:flex;align-items:center;justify-content:center;opacity:0;transition:all .3s}
+.ugc-tile:hover .ugc-overlay{background:rgba(0,0,0,.3);opacity:1}
+.ugc-overlay span{color:#fff;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
+/* ── PRESS ── */
+.press-section{padding:2.5rem 2.5rem;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light)}
+.press-inner{display:flex;align-items:center;justify-content:center;gap:3.5rem;flex-wrap:wrap}
+.press-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone-mid)}
+.press-logo{font-family:var(--serif);font-size:18px;font-weight:300;color:var(--stone);letter-spacing:.06em;opacity:.6;transition:opacity .2s;cursor:pointer}
+.press-logo:hover{opacity:1}
+.press-sep{width:1px;height:20px;background:var(--border)}
+
+/* ── NEWSLETTER ── */
+.newsletter-section{background:var(--charcoal);color:#fff;padding:5rem 2.5rem;text-align:center}
+.newsletter-section .section-label{color:rgba(255,255,255,.35);justify-content:center}
+.newsletter-section .section-label::after,.newsletter-section .section-label::before{content:'';flex:1;height:1px;background:rgba(255,255,255,.1)}
+.newsletter-section h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:300;margin-bottom:.75rem;margin-top:.75rem}
+.newsletter-section p{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:2.5rem}
+.nl-form{display:flex;max-width:460px;margin:0 auto;border:1px solid rgba(255,255,255,.2)}
+.nl-input{flex:1;background:transparent;border:none;padding:14px 18px;font-size:14px;color:#fff;font-family:var(--sans);outline:none}
+.nl-input::placeholder{color:rgba(255,255,255,.3)}
+.nl-submit{background:var(--terra);color:#fff;border:none;padding:14px 24px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s;font-family:var(--sans)}
+.nl-submit:hover{background:var(--terra-dark)}
+.nl-note{font-size:12px;color:rgba(255,255,255,.3);margin-top:1rem}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);color:#fff;padding:4rem 2.5rem 2rem}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand-text{font-family:var(--serif);font-size:22px;font-weight:300;margin-bottom:.5rem}
+.footer-brand-text em{color:var(--terra);font-style:italic}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:1.5rem;max-width:260px}
+.footer-social{display:flex;gap:10px}
+.social-pill{width:34px;height:34px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:12px;color:rgba(255,255,255,.5);cursor:pointer;transition:all .2s}
+.social-pill:hover{border-color:rgba(255,255,255,.5);color:#fff}
+.footer-col h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1.25rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col li{font-size:13px;color:rgba(255,255,255,.55);cursor:pointer;transition:color .2s}
+.footer-col li:hover{color:#fff}
+.footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem}
+.footer-legal p{font-size:12px;color:rgba(255,255,255,.3);margin-bottom:4px}
+.footer-legal a{color:rgba(255,255,255,.4);text-decoration:underline}
+.footer-kvk{font-size:11px;color:rgba(255,255,255,.25);margin-top:6px}
+.payment-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pay-chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);padding:4px 10px;font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.04em}
+
+/* ── CART DRAWER ── */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;opacity:0;pointer-events:none;transition:opacity .3s}
+.cart-overlay.open{opacity:1;pointer-events:all}
+.cart-drawer{position:fixed;right:0;top:0;bottom:0;width:420px;max-width:100vw;background:var(--cream);z-index:501;transform:translateX(100%);transition:transform .4s var(--transition);display:flex;flex-direction:column}
+.cart-drawer.open{transform:translateX(0)}
+.cart-head{padding:1.5rem 1.75rem;border-bottom:1px solid var(--border-light);display:flex;justify-content:space-between;align-items:center}
+.cart-head h3{font-family:var(--serif);font-size:22px;font-weight:300}
+.cart-close{background:none;border:none;font-size:22px;color:var(--ink);line-height:1}
+.cart-free-ship{margin:0 1.75rem;padding:1rem;background:var(--sage-light);margin-top:1rem;font-size:13px;color:var(--sage-dark)}
+.ship-bar{height:3px;background:var(--border);margin-top:8px;position:relative}
+.ship-bar-fill{position:absolute;left:0;top:0;bottom:0;background:var(--sage);transition:width .4s}
+.cart-items{flex:1;overflow-y:auto;padding:1.25rem 1.75rem}
+.cart-item{display:flex;gap:14px;padding:1rem 0;border-bottom:1px solid var(--border-light)}
+.cart-item-img{width:72px;height:90px;flex-shrink:0}
+.cart-item-meta{flex:1}
+.cart-item-name{font-size:14px;margin-bottom:3px;color:var(--charcoal)}
+.cart-item-sub{font-size:12px;color:var(--muted);margin-bottom:10px}
+.cart-qty-row{display:flex;align-items:center;justify-content:space-between}
+.qty-ctrl{display:flex;align-items:center;border:1px solid var(--border);gap:0}
+.qty-ctrl button{width:30px;height:30px;background:none;border:none;font-size:16px;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.qty-ctrl span{width:30px;text-align:center;font-size:13px}
+.cart-item-price{font-size:14px;font-weight:500;color:var(--charcoal)}
+.cart-item-remove{background:none;border:none;color:var(--stone-mid);font-size:11px;text-decoration:underline;cursor:pointer;margin-top:4px;display:block;text-align:right}
+.cart-upsell{background:var(--cream-deep);margin:0 1.75rem 0;padding:1rem;border:1px solid var(--border-light)}
+.cart-upsell h4{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
+.cart-upsell-items{display:flex;gap:10px;overflow-x:auto}
+.cart-upsell-item{flex-shrink:0;width:80px;cursor:pointer}
+.cart-upsell-item-img{height:80px;margin-bottom:6px}
+.cart-upsell-item p{font-size:11px;color:var(--ink);line-height:1.3;margin-bottom:2px}
+.cart-upsell-item span{font-size:11px;color:var(--terra)}
+.cart-gift{margin:1rem 1.75rem 0;padding:1rem;border:1px solid var(--border-light);display:flex;align-items:center;justify-content:space-between;font-size:13px}
+.cart-gift label{display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--ink)}
+.cart-gift input[type=checkbox]{accent-color:var(--terra)}
+.cart-foot{padding:1.5rem 1.75rem;border-top:1px solid var(--border-light)}
+.cart-totals{margin-bottom:1rem}
+.cart-total-row{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px;color:var(--muted)}
+.cart-total-row.grand{font-size:16px;font-weight:500;color:var(--charcoal);margin-top:.5rem;padding-top:.5rem;border-top:1px solid var(--border-light)}
+.checkout-cta{width:100%;background:var(--charcoal);color:#fff;border:none;padding:15px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s;font-family:var(--sans);margin-bottom:8px}
+.checkout-cta:hover{background:var(--terra)}
+.cart-trust{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+.cart-trust span{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px}
+
+/* ── WISHLIST DRAWER (shares same pattern) ── */
+.wishlist-drawer{position:fixed;right:0;top:0;bottom:0;width:380px;max-width:100vw;background:var(--cream);z-index:501;transform:translateX(100%);transition:transform .4s var(--transition);display:flex;flex-direction:column}
+.wishlist-drawer.open{transform:translateX(0)}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--charcoal);color:#fff;padding:12px 24px;font-size:13px;z-index:600;opacity:0;transition:all .3s;pointer-events:none;letter-spacing:.02em;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── BACK TO TOP ── */
+#back-top{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:var(--charcoal);color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(10px);transition:all .3s;z-index:400}
+#back-top.visible{opacity:1;transform:translateY(0)}
+#back-top:hover{background:var(--terra)}
+#back-top svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-right{display:none}
+  .hero-left{padding:4rem 2rem}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .featured-inner{grid-template-columns:1fr;gap:2rem}
+  .featured-float-img{display:none}
+  .sustain-inner{grid-template-columns:1fr;gap:2.5rem}
+  .story-inner{grid-template-columns:1fr;gap:2.5rem}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .ugc-grid{grid-template-columns:repeat(3,1fr)}
+  .impact-counters{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  nav{padding:0 1.5rem}
+  .nav-center{display:none}
+  .hamburger{display:flex}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .ugc-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-stats{grid-template-columns:repeat(3,1fr)}
+  .press-inner{gap:1.5rem}
+  .cart-upsell{display:none}
+  .cert-strip{gap:1.5rem;padding:1.2rem 1.5rem}
+}
+@media(max-width:480px){
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:38px}
+  .ugc-grid{grid-template-columns:repeat(2,1fr)}
+  .impact-counters{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner">
+  <p>We use cookies for analytics and personalisation. Read our <a href="#privacy">privacy policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-btn decline" onclick="dismissCookie()">Decline</button>
+    <button class="cookie-btn accept" onclick="dismissCookie()">Accept</button>
+  </div>
+</div>
+
+<!-- ANNOUNCE BAR -->
+<div id="announce-bar" aria-label="Site announcements">
+  <div class="announce-track" id="announce-track">
+    <span class="announce-item">🌿 Gratis verzending boven €75</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">Plasticvrije verpakking</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">GOTS-gecertificeerd katoen</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">CO₂-gecompenseerd transport</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">Eerlijk gemaakt in kleine series</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">🌿 Gratis verzending boven €75</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">Plasticvrije verpakking</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">GOTS-gecertificeerd katoen</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">CO₂-gecompenseerd transport</span>
+    <span class="announce-dot"></span>
+    <span class="announce-item">Eerlijk gemaakt in kleine series</span>
+    <span class="announce-dot"></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-logo" onclick="scrollToTop()">
+    <svg class="nav-logo-mark" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 3C14 3 6 8 6 16C6 20.4 9.6 24 14 24C18.4 24 22 20.4 22 16C22 8 14 3 14 3Z" stroke="#B85C38" stroke-width="1.2" fill="none"/>
+      <path d="M14 10V24" stroke="#5C7A5E" stroke-width="1" opacity=".6"/>
+      <path d="M14 14C14 14 10 12 8 9" stroke="#5C7A5E" stroke-width="1" opacity=".5"/>
+      <path d="M14 17C14 17 18 15 20 12" stroke="#5C7A5E" stroke-width="1" opacity=".5"/>
+    </svg>
+    <span class="nav-logo-text">Terra<em>Verde</em></span>
+  </div>
+  <ul class="nav-center">
+    <li><a href="index.html#products">Shop</a></li>
+    <li><a href="sustainability.html">Duurzaamheid</a></li>
+    <li><a href="our-story.html">Ons Verhaal</a></li>
+    <li><a href="blog.html">Journal</a></li>
+    <li><a href="gift-finder.html">Gift Finder</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-btn" onclick="toggleWishlist()" title="Verlanglijst">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </button>
+    <button class="nav-btn" onclick="toggleCart()" title="Winkelwagen">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav">
+  <div class="mobile-nav-header">
+    <span class="nav-logo-text">Terra<em>Verde</em></span>
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">✕</button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="#products" onclick="toggleMobileNav()">Shop</a>
+    <a href="sustainability.html" onclick="toggleMobileNav()">Duurzaamheid</a>
+    <a href="our-story.html" onclick="toggleMobileNav()">Ons Verhaal</a>
+    <a href="blog.html" onclick="toggleMobileNav()">Journal</a>
+    <a href="gift-finder.html" onclick="toggleMobileNav()">Gift Finder</a>
+  </div>
+  <div class="mobile-nav-bottom">
+    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0169606d6d6e41756473736077647365642f6f6d">[email&#160;protected]</a> · +31 20 123 4567</p>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Duurzaam wonen, bewust kiezen</span>
+    <h1>Mooi thuis,<br><em>betere keuzes.</em></h1>
+    <p class="hero-sub">Ambachtelijk gemaakte placemats, handtassen en woonaccessoires — vervaardigd uit natuurlijk linnen, jute en katoen. Ontworpen in Amsterdam, eerlijk gemaakt in kleine series.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn-primary">
+        Bekijk collectie
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="our-story.html" class="btn-ghost">Ons verhaal</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>100%</strong><span>Natuurlijke vezels</span></div>
+      <div class="hero-stat"><strong>2.400+</strong><span>Blije huizen</span></div>
+      <div class="hero-stat"><strong>0</strong><span>Plastic verpakking</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Placemats</span></div></div>
+    <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Handtassen</span></div></div>
+    <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Kussens</span></div></div>
+    <div class="hero-img"><div class="hero-img-inner"><span class="hero-img-label">Accessoires</span></div></div>
+  </div>
+</section>
+
+<!-- CERT STRIP -->
+<div class="cert-strip">
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    GOTS Certified
+  </div>
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    OEKO-TEX® Standard 100
+  </div>
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+    CO₂-Gecompenseerd
+  </div>
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    Eerlijke handel
+  </div>
+</div>
+
+<!-- PRESS -->
+<div class="press-section">
+  <div class="press-inner">
+    <span class="press-label">Zoals gezien in</span>
+    <div class="press-sep"></div>
+    <span class="press-logo">Vtwonen</span>
+    <div class="press-sep"></div>
+    <span class="press-logo">Elle Wonen</span>
+    <div class="press-sep"></div>
+    <span class="press-logo">Libelle</span>
+    <div class="press-sep"></div>
+    <span class="press-logo">De Volkskrant</span>
+    <div class="press-sep"></div>
+    <span class="press-logo">Bright</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="cat-section">
+  <div class="cat-header">
+    <h2>Onze collecties</h2>
+    <a href="index.html#products">Alles bekijken →</a>
+  </div>
+  <div class="cat-grid">
+    <div class="cat-card" onclick="filterProducts('tabletop')">
+      <div class="cat-card-inner"><div class="cat-card-text"><h3>Tafelaccessoires</h3><p>Placemats, servetten & lopers</p></div></div>
+    </div>
+    <div class="cat-card" onclick="filterProducts('accessories')">
+      <div class="cat-card-inner"><div class="cat-card-text"><h3>Tassen & Pouches</h3><p>Handtassen, totes & washbags</p></div></div>
+    </div>
+    <div class="cat-card" onclick="filterProducts('home-decor')">
+      <div class="cat-card-inner"><div class="cat-card-text"><h3>Woondecoratie</h3><p>Kussens, plaids & manden</p></div></div>
+    </div>
+    <div class="cat-card" onclick="filterProducts('gifts')">
+      <div class="cat-card-inner"><div class="cat-card-text"><h3>Cadeausets</h3><p>Samengestelde duurzame sets</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="products-top">
+    <div>
+      <div class="section-label">Nieuwe collectie</div>
+      <h2>Ambacht voor bewust wonen</h2>
+    </div>
+    <select class="sort-select" onchange="sortProducts(this.value)">
+      <option value="default">Sorteren op: Aanbevolen</option>
+      <option value="price-asc">Prijs: laag → hoog</option>
+      <option value="price-desc">Prijs: hoog → laag</option>
+      <option value="newest">Nieuwste eerst</option>
+    </select>
+  </div>
+  <div class="filter-row">
+    <button class="filter-btn active" onclick="filterProducts('all')" id="fb-all">Alles</button>
+    <button class="filter-btn" onclick="filterProducts('tabletop')" id="fb-tabletop">Tafelaccessoires</button>
+    <button class="filter-btn" onclick="filterProducts('accessories')" id="fb-accessories">Tassen</button>
+    <button class="filter-btn" onclick="filterProducts('home-decor')" id="fb-home-decor">Woondecoratie</button>
+    <button class="filter-btn" onclick="filterProducts('gifts')" id="fb-gifts">Cadeausets</button>
+  </div>
+  <div class="product-grid" id="product-grid"></div>
+</section>
+
+<!-- SUSTAINABILITY -->
+<section class="sustain-section" id="sustainability">
+  <div class="sustain-inner">
+    <div class="sustain-text">
+      <div class="section-label">Onze belofte</div>
+      <h2>Schoonheid die de aarde respecteert.</h2>
+      <p>Bij TerraVerde geloven we dat stijlvol wonen en duurzaamheid hand in hand gaan. Elk product is eerlijk gemaakt in kleine series, met materialen die de aarde niet belasten.</p>
+      <a href="our-story.html" class="sustain-cta">Lees ons duurzaamheidsverhaal →</a>
+    </div>
+    <div>
+      <div class="sustain-pillars">
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 4c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/></svg></div>
+          <div><h4>100% Natuurlijke materialen</h4><p>Belgisch linnen, biologisch katoen, jute en zeegras. Geen synthetische toevoegingen.</p></div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><h4>Eerlijk gemaakt</h4><p>Samenwerking met 14 ambachtsmansfamilies. Fair wages, veilige werkomstandigheden, transparante toeleveringsketen.</p></div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3"/></svg></div>
+          <div><h4>Circulair ontwerp</h4><p>Terugname- en reparatieprogramma. Stuur gedragen producten terug voor upcycling, ontvang 15% korting.</p></div>
+        </div>
+      </div>
+      <div class="sustain-scorecard">
+        <h4>Duurzaamheidsscore per categorie</h4>
+        <div class="score-row-items">
+          <div class="score-row-item"><span>Materialen</span><span class="score-badge green">GOTS Certified</span></div>
+          <div class="score-row-item"><span>Productie</span><span class="score-badge green">Fair Trade</span></div>
+          <div class="score-row-item"><span>Verpakking</span><span class="score-badge green">100% Plasticvrij</span></div>
+          <div class="score-row-item"><span>Transport</span><span class="score-badge amber">CO₂ Gecompenseerd</span></div>
+          <div class="score-row-item"><span>Einde levensduur</span><span class="score-badge green">Terugname actief</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT COUNTERS -->
+<section class="impact-section">
+  <div class="impact-inner">
+    <div class="section-label">Onze impact tot nu toe</div>
+    <div class="impact-counters">
+      <div class="impact-counter"><strong>418 kg</strong><span>Plastic vermeden in verpakking</span></div>
+      <div class="impact-counter"><strong>14</strong><span>Ambachtsmansfamilies ondersteund</span></div>
+      <div class="impact-counter"><strong>2.847</strong><span>Blije huishoudens</span></div>
+      <div class="impact-counter"><strong>100%</strong><span>CO₂-gecompenseerde verzendingen</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured-section" id="featured">
+  <div class="featured-inner">
+    <div class="featured-img-area">
+      <div class="featured-main-img"></div>
+      <div class="featured-float-img"></div>
+    </div>
+    <div class="featured-text">
+      <div class="section-label">Uitgelicht</div>
+      <h2>De Linnen Tafellaken Collectie</h2>
+      <p>Zet een tafel om lang aan te blijven zitten. Onze gewassen linnen placemats en servetten brengen moeiteloze warmte bij elke maaltijd. Natuurlijk getextureerd, machinewasbaar, steeds mooier.</p>
+      <div class="material-tags">
+        <span class="material-tag">Belgisch linnen</span>
+        <span class="material-tag">Steenwas afwerking</span>
+        <span class="material-tag">OEKO-TEX®</span>
+        <span class="material-tag">Set van 4</span>
+      </div>
+      <div class="featured-mini-products">
+        <div class="mini-prod" onclick="addToCart('Salie Linnen Placemats', 38, 1)">
+          <div class="mini-prod-img mp1"></div>
+          <p>Salie Placemats (4st)</p><span>€38,00</span>
+        </div>
+        <div class="mini-prod" onclick="addToCart('Terra Servetten', 24, 9)">
+          <div class="mini-prod-img mp2"></div>
+          <p>Terra Servetten (4st)</p><span>€24,00</span>
+        </div>
+        <div class="mini-prod" onclick="addToCart('Steen Tafelloper', 42, 3)">
+          <div class="mini-prod-img mp3"></div>
+          <p>Steen Tafelloper</p><span>€42,00</span>
+        </div>
+        <div class="mini-prod" onclick="addToCart('Olijf Placemats', 38, 5)">
+          <div class="mini-prod-img mp4"></div>
+          <p>Olijf Placemats (4st)</p><span>€38,00</span>
+        </div>
+      </div>
+      <a href="#products" class="btn-primary" onclick="filterProducts('tabletop')">
+        Bekijk tafellakens
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story-section" id="story">
+  <div class="story-inner">
+    <div class="story-img-grid">
+      <div class="story-img"></div>
+      <div class="story-img"></div>
+      <div class="story-img"></div>
+    </div>
+    <div class="story-text">
+      <div class="section-label">Ons verhaal</div>
+      <h2>Gemaakt met zorg, gedragen met trots.</h2>
+      <p>TerraVerde werd geboren uit een diepe liefde voor natuurlijke materialen en ambachtelijk vakmanschap. Oprichter Emma de Vries leerde het vak van haar grootmoeder, die haar leerde dat het mooiste meubilair altijd het langst mee gaat.</p>
+      <p>Elk product in onze collectie is met de hand gemaakt in kleine series, in samenwerking met ambachtslieden die trots zijn op hun werk. We betalen eerlijke lonen, bezoeken onze productiepartners elk jaar persoonlijk, en weigeren compromissen op kwaliteit of eerlijkheid.</p>
+      <div class="cert-badges">
+        <span class="cert-badge">GOTS Certified Organic</span>
+        <span class="cert-badge">OEKO-TEX® Standard 100</span>
+        <span class="cert-badge">CO₂ Neutral Shipping</span>
+        <span class="cert-badge">Plastic-Free Packaging</span>
+      </div>
+      <a href="sustainability.html" class="btn-ghost">Onze duurzaamheidspagina →</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="reviews-header">
+    <div class="section-label" style="justify-content:center;margin-bottom:.5rem"></div>
+    <h2>Geliefd door bewuste huizen</h2>
+    <p class="avg">Gemiddeld <strong>4.9 / 5</strong> op basis van 312 beoordelingen · <a href="https://trustpilot.com" style="color:var(--terra);text-decoration:underline">Bekijk op Trustpilot</a></p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"De linnen placemats zijn absoluut prachtig. Ze hebben mijn eettafel getransformeerd en ik vind het geweldig dat ze van natuurlijke vezels zijn gemaakt. De kwaliteit overtreft mijn verwachtingen — ik bestel zeker meer."</p>
+      <div class="review-author"><strong>Sophie M.</strong><span>Amsterdam, NL · Geverifieerde koper</span></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"De geweven jute handtas besteld als verjaardagscadeau en hij arriveerde in de mooiste milieuvriendelijke verpakking. De kwaliteit is uitzonderlijk — hij ziet er in het echt nog mooier uit dan op de foto."</p>
+      <div class="review-author"><strong>Ingrid K.</strong><span>Amsterdam, NL · Geverifieerde koper</span></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Eindelijk een merk dat zijn duurzaamheidsbeloften waarmaakt. De materialen zijn echt natuurlijk en het vakmanschap is prachtig. De terugname-service voor oude producten is zo'n geweldig idee."</p>
+      <div class="review-author"><strong>Clara B.</strong><span>Utrecht, NL · Geverifieerde koper</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- UGC / INSTAGRAM -->
+<section class="ugc-section" id="journal">
+  <div class="ugc-header">
+    <h2>TerraVerde in jouw thuis</h2>
+    <p>Deel jouw foto met <strong>#MijnTerraVerde</strong> op Instagram</p>
+  </div>
+  <div class="ugc-grid">
+    <div class="ugc-tile"><div class="ugc-tile-inner"></div><div class="ugc-overlay"><span>@sophie_thuis</span></div></div>
+    <div class="ugc-tile"><div class="ugc-tile-inner"></div><div class="ugc-overlay"><span>@livewithlinen</span></div></div>
+    <div class="ugc-tile"><div class="ugc-tile-inner"></div><div class="ugc-overlay"><span>@groenerwonen</span></div></div>
+    <div class="ugc-tile"><div class="ugc-tile-inner"></div><div class="ugc-overlay"><span>@duurzaam.thuis</span></div></div>
+    <div class="ugc-tile"><div class="ugc-tile-inner"></div><div class="ugc-overlay"><span>@interieurnl</span></div></div>
+    <div class="ugc-tile"><div class="ugc-tile-inner"></div><div class="ugc-overlay"><span>@homemadehappy</span></div></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="section-label">Blijf op de hoogte</div>
+  <h2>Word lid van de TerraVerde familie</h2>
+  <p>Nieuwe collecties, styling-inspiratie en <strong>10% korting</strong> op je eerste bestelling.</p>
+  <div class="nl-form">
+    <input class="nl-input" type="email" id="nl-email" placeholder="Jouw e-mailadres" autocomplete="email">
+    <button class="nl-submit" onclick="handleNewsletter()">Aanmelden</button>
+  </div>
+  <p class="nl-note">Geen spam. Afmelden kan altijd. Lees onze <a href="#privacy" style="color:rgba(255,255,255,.4);text-decoration:underline">privacyverklaring</a>.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-text">Terra<em>Verde</em></div>
+      <p>Duurzame woonproducten & accessoires, gemaakt door ambachtslieden die om kwaliteit geven. Ontworpen in Amsterdam, wereldwijd verzonden.</p>
+      <div class="footer-social">
+        <div class="social-pill">ig</div>
+        <div class="social-pill">pt</div>
+        <div class="social-pill">fb</div>
+        <div class="social-pill">tt</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Winkelen</h4>
+      <ul>
+        <li>Tafelaccessoires</li>
+        <li>Tassen & Pouches</li>
+        <li>Woondecoratie</li>
+        <li>Cadeausets</li>
+        <li>Uitverkoop</li>
+        <li>Nieuw binnen</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Bedrijf</h4>
+      <ul>
+        <li>Ons Verhaal</li>
+        <li>Duurzaamheid</li>
+        <li>Onze Ambachtslieden</li>
+        <li>Journal / Blog</li>
+        <li>Pers & Media</li>
+        <li>Groothandel</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Klantenservice</h4>
+      <ul>
+        <li>Veelgestelde vragen</li>
+        <li>Verzending & Retourneren</li>
+        <li>Maattabel</li>
+        <li>Verzorgingsgids</li>
+        <li>Contacteer ons</li>
+        <li>Cadeauverpakking</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <p>© 2026 TerraVerde · <a href="#privacy">Privacyverklaring</a> · <a href="#terms">Algemene Voorwaarden</a> · <a href="#cookies">Cookiebeleid</a></p>
+      <p class="footer-kvk">TerraVerde B.V. · KvK: 87654321 · BTW: NL864213579B01 · Herengracht 182, 1016 BR Amsterdam</p>
+      <p style="font-size:11px;color:rgba(255,255,255,.25);margin-top:4px">Contacteer ons: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0b8b1bcbcbf90a4b5a2a2b1a6b5a2b4b5febebc">[email&#160;protected]</a> · +31 20 123 4567</p>
+    </div>
+    <div>
+      <div class="payment-row" style="margin-bottom:8px">
+        <span class="pay-chip">iDEAL</span>
+        <span class="pay-chip">Visa</span>
+        <span class="pay-chip">Mastercard</span>
+        <span class="pay-chip">PayPal</span>
+        <span class="pay-chip">Klarna</span>
+        <span class="pay-chip">Bancontact</span>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,.25);text-align:right">Thuiswinkel Waarborg · SSL Beveiligd</p>
+    </div>
+  </div>
+</footer>
+
+<!-- CART OVERLAY + DRAWER -->
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-head">
+    <h3>Jouw Winkelwagen</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-free-ship" id="ship-msg">
+    <span id="ship-text">Voeg nog €75 toe voor gratis verzending</span>
+    <div class="ship-bar"><div class="ship-bar-fill" id="ship-fill" style="width:0%"></div></div>
+  </div>
+  <div class="cart-items" id="cart-items-list"></div>
+  <div class="cart-upsell" id="cart-upsell">
+    <h4>Misschien ook leuk</h4>
+    <div class="cart-upsell-items" id="upsell-items"></div>
+  </div>
+  <div class="cart-gift">
+    <label><input type="checkbox" id="gift-wrap"> Cadeauverpakking toevoegen</label>
+    <span style="font-size:13px;color:var(--muted)">+€3,50</span>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-totals">
+      <div class="cart-total-row"><span>Subtotaal</span><span id="cart-sub">€0,00</span></div>
+      <div class="cart-total-row"><span>Verzending</span><span id="cart-ship-cost">Berekend bij afrekenen</span></div>
+      <div class="cart-total-row grand"><span>Totaal</span><span id="cart-grand">€0,00</span></div>
+    </div>
+    <button class="checkout-cta" onclick="handleCheckout()">Afrekenen →</button>
+    <div class="cart-trust">
+      <span>🔒 Beveiligde betaling</span>
+      <span>✓ 14 dagen retour</span>
+      <span>🌿 Plasticvrij</span>
+    </div>
+  </div>
+</div>
+
+<!-- WISHLIST DRAWER -->
+<div class="wishlist-drawer" id="wishlist-drawer">
+  <div class="cart-head">
+    <h3>Verlanglijst</h3>
+    <button class="cart-close" onclick="toggleWishlist()">✕</button>
+  </div>
+  <div class="cart-items" id="wishlist-items" style="padding:1.5rem"></div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- BACK TO TOP -->
+<button id="back-top" onclick="scrollToTop()" aria-label="Terug naar boven">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const PRODUCTS = [
+  {id:1,name:'Salie Gewassen Linnen Placemats',material:'100% Belgisch linnen, steenwas',price:38,oldPrice:null,tag:'Nieuw',cat:'tabletop',colors:['#7A9A7E','#B85C38','#D8D4CC'],rating:4.9,reviews:48,stock:8,bg:'linear-gradient(155deg,#c8d4c2,#5C7A5E)'},
+  {id:2,name:'Terra Jute Handtas',material:'Natuurlijk jute & katoenen voering',price:65,oldPrice:88,tag:'Sale',cat:'accessories',colors:['#B85C38','#7A9A7E'],rating:4.8,reviews:31,stock:3,bg:'linear-gradient(155deg,#dfc9bc,#B85C38)'},
+  {id:3,name:'Steen Linnen Tafelloper',material:'Steenwas linnen, 150cm',price:42,oldPrice:null,tag:'Nieuw',cat:'tabletop',colors:['#D8D4CC','#A09080','#7A9A7E'],rating:5.0,reviews:22,stock:12,bg:'linear-gradient(155deg,#d8d4cc,#8A8070)'},
+  {id:4,name:'Geweven Zeegras Shopper',material:'Natuurlijk zeegras, 40×35cm',price:72,oldPrice:null,tag:null,cat:'accessories',colors:['#B8A88A','#B85C38'],rating:4.7,reviews:19,stock:15,bg:'linear-gradient(155deg,#d8c9b4,#9A8060)'},
+  {id:5,name:'Olijf Linnen Servetten (4st)',material:'Zacht Europees linnen',price:28,oldPrice:null,tag:'Nieuw',cat:'tabletop',colors:['#8A9C6A','#7A9A7E','#D8D4CC'],rating:4.9,reviews:35,stock:20,bg:'linear-gradient(155deg,#c5d0c7,#5C7A5E)'},
+  {id:6,name:'Blush Biologisch Katoen Kussenhoes',material:'Biologisch katoen, handgeverfd',price:45,oldPrice:60,tag:'Sale',cat:'home-decor',colors:['#D4967E','#B85C38','#D8D4CC'],rating:4.8,reviews:27,stock:4,bg:'linear-gradient(155deg,#e0c9bc,#B85C38)'},
+  {id:7,name:'Naturel Linnen Draagtas',material:'Ongebleekt zwaar linnen',price:35,oldPrice:null,tag:null,cat:'accessories',colors:['#D4C9B4','#8A9C6A'],rating:4.6,reviews:14,stock:25,bg:'linear-gradient(155deg,#e0ddd5,#9A9070)'},
+  {id:8,name:'Forest Biologisch Katoenen Plaid',material:'Bio katoen & wol mix, 130×170cm',price:95,oldPrice:null,tag:'Nieuw',cat:'home-decor',colors:['#3A5A3C','#5C7A5E','#B8CDB5'],rating:4.9,reviews:41,stock:6,bg:'linear-gradient(155deg,#b8cdb5,#3A5A3C)'},
+  {id:9,name:'Terra Gewassen Placemats (4st)',material:'Gewassen katoen',price:36,oldPrice:48,tag:'Sale',cat:'tabletop',colors:['#B85C38','#D4967E'],rating:4.7,reviews:52,stock:9,bg:'linear-gradient(155deg,#e0c9bc,#B85C38)'},
+  {id:10,name:'Salie Linnen Gewatteerde Pouch',material:'Gewatteerd linnen, ritssluiting',price:22,oldPrice:null,tag:null,cat:'accessories',colors:['#7A8A9A','#D8D4CC'],rating:4.8,reviews:38,stock:18,bg:'linear-gradient(155deg,#c8cdd4,#5A6A7A)'},
+  {id:11,name:'Ambachtelijke Cadeauset — Thuis',material:'Placemat, servetten & pouch',price:85,oldPrice:null,tag:'Nieuw',cat:'gifts',colors:['#7A9A7E','#B85C38','#D8D4CC'],rating:5.0,reviews:16,stock:7,bg:'linear-gradient(155deg,#c8d4c2,#3A5A3C)'},
+  {id:12,name:'Serenity Thuisbundel',material:'Plaid + 2 kussenovertrekken',price:145,oldPrice:175,tag:'Sale',cat:'gifts',colors:['#3A5A3C','#D4967E'],rating:4.9,reviews:23,stock:4,bg:'linear-gradient(155deg,#c2d0c4,#3A5A3C)'},
+  {id:13,name:'Zeegras Opbergmand (M)',material:'Handgevlochten zeegras, Ø30cm',price:55,oldPrice:null,tag:'Nieuw',cat:'home-decor',colors:['#B8A88A','#8A7060'],rating:4.8,reviews:29,stock:11,bg:'linear-gradient(155deg,#d8c9a8,#9A8050)'},
+  {id:14,name:'Jute & Leer Clutch',material:'Naturel jute met leren sluiting',price:48,oldPrice:null,tag:null,cat:'accessories',colors:['#B8A88A','#5A3A20'],rating:4.7,reviews:17,stock:8,bg:'linear-gradient(155deg,#d0c4b0,#8A6040)'},
+];
+
+let cart = [];
+let wishlist = [];
+let currentFilter = 'all';
+let currentSort = 'default';
+
+function renderProducts() {
+  let prods = [...PRODUCTS];
+  if (currentFilter !== 'all') prods = prods.filter(p => p.cat === currentFilter);
+  if (currentSort === 'price-asc') prods.sort((a,b) => a.price - b.price);
+  else if (currentSort === 'price-desc') prods.sort((a,b) => b.price - a.price);
+  else if (currentSort === 'newest') prods.sort((a,b) => (a.tag==='Nieuw'?-1:1));
+
+  document.getElementById('product-grid').innerHTML = prods.map(p => {
+    const inWish = wishlist.includes(p.id);
+    return `<div class="product-card" onclick="openProduct(${p.id})">
+      <div class="product-card-img">
+        ${p.tag ? `<span class="product-badge ${p.tag==='Sale'?'badge-sale':p.tag==='Nieuw'?'badge-new':'badge-low'}">${p.tag}</span>` : ''}
+        ${p.stock <= 4 ? `<span class="product-badge badge-low" style="left:auto;right:14px">Bijna op</span>` : ''}
+        <div class="product-card-img-inner" style="background:${p.bg};height:100%;display:flex;align-items:flex-end;padding:1rem"></div>
+        <button class="product-wishlist ${inWish?'active':''}" onclick="event.stopPropagation();toggleWishlistItem(${p.id})" title="Verlanglijst">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <button class="product-quick-add" onclick="event.stopPropagation();addToCart(p.name,p.price,p.id)" onclick="event.stopPropagation();quickAdd(${p.id})">+ Voeg toe aan winkelwagen</button>
+      </div>
+      <div class="product-card-body">
+        <div class="product-rating">
+          <span class="stars-sm">${'★'.repeat(Math.round(p.rating))}</span>
+          <span class="rating-count">(${p.reviews})</span>
+        </div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-material">${p.material}</div>
+        <div class="product-footer">
+          <div class="product-price-group">
+            <span class="price-now">€${p.price.toFixed(2).replace('.',',')}</span>
+            ${p.oldPrice ? `<span class="price-was">€${p.oldPrice.toFixed(2).replace('.',',')}</span><span class="price-off">${Math.round((1-p.price/p.oldPrice)*100)}% korting</span>` : ''}
+          </div>
+          <div class="product-colors">${p.colors.map(c=>`<div class="color-swatch" style="background:${c}"></div>`).join('')}</div>
+        </div>
+        ${p.stock <= 4 ? `<div class="stock-warning">Nog ${p.stock} op voorraad</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function quickAdd(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  addToCart(p.name, p.price, p.id);
+}
+
+function filterProducts(cat) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('fb-' + cat);
+  if (btn) btn.classList.add('active');
+  renderProducts();
+}
+
+function sortProducts(val) { currentSort = val; renderProducts(); }
+
+function addToCart(name, price, id) {
+  const existing = cart.find(i => i.id === id);
+  const p = PRODUCTS.find(x => x.id === id);
+  if (existing) existing.qty++;
+  else cart.push({id, name, price, qty:1, bg: p ? p.bg : ''});
+  updateCartUI();
+  showToast('Toegevoegd aan winkelwagen ✓');
+}
+
+function openProduct(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  addToCart(p.name, p.price, p.id);
+}
+
+function toggleWishlistItem(id) {
+  const idx = wishlist.indexOf(id);
+  if (idx > -1) { wishlist.splice(idx,1); showToast('Verwijderd uit verlanglijst'); }
+  else { wishlist.push(id); showToast('Toegevoegd aan verlanglijst ♥'); }
+  renderProducts();
+  renderWishlist();
+}
+
+function updateCartUI() {
+  const count = cart.reduce((s,i) => s+i.qty, 0);
+  document.getElementById('cart-count').textContent = count;
+  const sub = cart.reduce((s,i) => s+i.price*i.qty, 0);
+  const gift = document.getElementById('gift-wrap')?.checked ? 3.5 : 0;
+  const ship = sub >= 75 ? 0 : sub > 0 ? 4.95 : 0;
+  document.getElementById('cart-sub').textContent = `€${sub.toFixed(2).replace('.',',')}`;
+  document.getElementById('cart-ship-cost').textContent = ship === 0 && sub > 0 ? 'Gratis ✓' : ship > 0 ? `€${ship.toFixed(2).replace('.',',')}` : 'Berekend bij afrekenen';
+  document.getElementById('cart-grand').textContent = `€${(sub+ship+gift).toFixed(2).replace('.',',')}`;
+  const pct = Math.min((sub/75)*100, 100);
+  document.getElementById('ship-fill').style.width = pct + '%';
+  const remaining = Math.max(75 - sub, 0);
+  document.getElementById('ship-text').textContent = remaining > 0 ? `Voeg nog €${remaining.toFixed(2).replace('.',',')} toe voor gratis verzending` : 'Gefeliciteerd! Je hebt gratis verzending. 🎉';
+  renderCartItems();
+  renderUpsell();
+}
+
+function renderCartItems() {
+  const el = document.getElementById('cart-items-list');
+  if (cart.length === 0) {
+    el.innerHTML = `<div style="text-align:center;padding:3rem 1rem"><p style="color:var(--muted);margin-bottom:1.5rem;font-family:var(--serif);font-size:18px">Je winkelwagen is leeg</p><button class="btn-primary" onclick="toggleCart()" style="margin:0 auto">Verder winkelen <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button></div>`;
+    return;
+  }
+  el.innerHTML = cart.map((item,idx) => `
+    <div class="cart-item">
+      <div class="cart-item-img" style="background:${item.bg};flex-shrink:0"></div>
+      <div class="cart-item-meta">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-sub">Natuurlijke vezels · Plasticvrij verpakt</div>
+        <div class="cart-qty-row">
+          <div class="qty-ctrl">
+            <button onclick="changeQty(${idx},-1)">−</button>
+            <span>${item.qty}</span>
+            <button onclick="changeQty(${idx},1)">+</button>
+          </div>
+          <span class="cart-item-price">€${(item.price*item.qty).toFixed(2).replace('.',',')}</span>
+        </div>
+        <button class="cart-item-remove" onclick="removeItem(${idx})">Verwijderen</button>
+      </div>
+    </div>`).join('');
+}
+
+function renderUpsell() {
+  const cartIds = cart.map(i => i.id);
+  const suggestions = PRODUCTS.filter(p => !cartIds.includes(p.id)).slice(0,3);
+  document.getElementById('upsell-items').innerHTML = suggestions.map(p => `
+    <div class="cart-upsell-item" onclick="addToCart('${p.name}',${p.price},${p.id})">
+      <div class="cart-upsell-item-img" style="background:${p.bg}"></div>
+      <p>${p.name}</p><span>€${p.price.toFixed(2).replace('.',',')}</span>
+    </div>`).join('');
+}
+
+function renderWishlist() {
+  const items = PRODUCTS.filter(p => wishlist.includes(p.id));
+  const el = document.getElementById('wishlist-items');
+  if (items.length === 0) { el.innerHTML = '<p style="color:var(--muted);font-size:14px">Nog geen producten opgeslagen.</p>'; return; }
+  el.innerHTML = items.map(p => `
+    <div class="cart-item">
+      <div class="cart-item-img" style="background:${p.bg};flex-shrink:0"></div>
+      <div class="cart-item-meta">
+        <div class="cart-item-name">${p.name}</div>
+        <div class="cart-item-sub">€${p.price.toFixed(2).replace('.',',')}</div>
+        <button class="btn-primary" style="font-size:10px;padding:8px 14px;margin-top:8px" onclick="addToCart('${p.name}',${p.price},${p.id});toggleWishlist()">In winkelwagen</button>
+      </div>
+    </div>`).join('');
+}
+
+function changeQty(idx, delta) {
+  cart[idx].qty += delta;
+  if (cart[idx].qty <= 0) cart.splice(idx,1);
+  updateCartUI();
+}
+function removeItem(idx) { cart.splice(idx,1); updateCartUI(); }
+
+function toggleCart() {
+  const d = document.getElementById('cart-drawer');
+  const o = document.getElementById('cart-overlay');
+  const open = d.classList.toggle('open');
+  o.classList.toggle('open', open);
+  if (open) { updateCartUI(); document.getElementById('wishlist-drawer').classList.remove('open'); }
+}
+function toggleWishlist() {
+  const d = document.getElementById('wishlist-drawer');
+  const o = document.getElementById('cart-overlay');
+  const open = d.classList.toggle('open');
+  o.classList.toggle('open', open);
+  if (open) { renderWishlist(); document.getElementById('cart-drawer').classList.remove('open'); }
+}
+function toggleMobileNav() {
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+function scrollToTop() { window.scrollTo({top:0,behavior:'smooth'}); }
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+function handleNewsletter() {
+  const v = document.getElementById('nl-email').value;
+  if (v && v.includes('@')) {
+    showToast('Aangemeld! Check je inbox voor 10% korting ✓');
+    document.getElementById('nl-email').value = '';
+  } else showToast('Vul een geldig e-mailadres in');
+}
+
+function handleCheckout() {
+  if (cart.length === 0) { showToast('Je winkelwagen is leeg'); return; }
+  showToast('Doorsturen naar afrekenpagina… (demo)');
+}
+
+function dismissCookie() {
+  document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
+}
+
+window.a

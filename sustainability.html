@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sustainability — TerraVerde | How We Make a Difference</title>
+<meta name="description" content="Our full sustainability story: GOTS certification, fair wages, plastic-free packaging, carbon-offset shipping, and our take-back programme. Real numbers, real commitments.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#F8F4EE;--cream-deep:#F0EAE0;--terra:#B85C38;--terra-light:#F2E4DC;--sage:#5C7A5E;--sage-light:#DDE8DE;--forest:#2A3D2C;--charcoal:#1C1C1A;--ink:#2E2C28;--muted:#6E6860;--border:#DDD8D0;--border-light:#EDE9E2;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--ease:cubic-bezier(.25,.46,.45,.94)}
+html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--sans)}
+nav{background:var(--cream);border-bottom:1px solid var(--border-light);position:sticky;top:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem}
+.logo{font-family:var(--serif);font-size:22px;font-weight:400;cursor:pointer}.logo em{color:var(--terra);font-style:italic}
+.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{font-size:13px;letter-spacing:.04em;color:var(--muted)}.nav-links a.on{color:var(--ink)}
+.nav-right{display:flex;gap:1rem}
+.icon-btn{background:none;border:none;padding:8px;display:flex;align-items:center}.icon-btn svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.5}
+
+.sus-hero{background:var(--forest);color:#fff;padding:8rem 2.5rem;text-align:center}
+.sus-hero-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);display:block;margin-bottom:1.25rem}
+.sus-hero h1{font-family:var(--serif);font-size:clamp(44px,6vw,76px);font-weight:300;line-height:1.1;margin-bottom:1.25rem}
+.sus-hero h1 em{font-style:italic;color:rgba(184,92,56,.85)}
+.sus-hero p{font-size:17px;color:rgba(255,255,255,.6);max-width:580px;margin:0 auto 3rem;line-height:1.8}
+.impact-bar{display:flex;justify-content:center;gap:0;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:3rem}
+.impact-item{padding:1.5rem 3rem;border-right:1px solid rgba(255,255,255,.1);text-align:center}
+.impact-item:last-child{border-right:none}
+.impact-num{font-family:var(--serif);font-size:44px;font-weight:300;color:#fff;display:block;line-height:1}
+.impact-label{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:.04em;margin-top:4px;display:block}
+
+.sus-intro{max-width:780px;margin:0 auto;padding:5rem 2.5rem;text-align:center}
+.sus-intro h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;color:var(--charcoal);margin-bottom:1.25rem}
+.sus-intro p{font-size:16px;color:var(--muted);line-height:1.85}
+
+.cert-section{padding:0 2.5rem 5rem}
+.cert-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cert-card{background:var(--cream-deep);border:1px solid var(--border-light);padding:2rem 1.5rem;text-align:center}
+.cert-logo{width:60px;height:60px;background:var(--forest);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:11px;font-weight:500;color:#fff;letter-spacing:.04em}
+.cert-card h3{font-size:15px;font-weight:500;margin-bottom:.4rem}
+.cert-card p{font-size:13px;color:var(--muted);line-height:1.6}
+
+.pillar-section{background:var(--cream-deep)}
+.pillar{display:grid;grid-template-columns:1fr 1fr;min-height:420px;border-bottom:1px solid var(--border-light)}
+.pillar.reverse{direction:rtl}
+.pillar.reverse>*{direction:ltr}
+.pillar-img{overflow:hidden}
+.pillar-img-inner{width:100%;height:100%;min-height:320px}
+.pi1{background:linear-gradient(145deg,#c8d4c2,#3A5A3C)}
+.pi2{background:linear-gradient(145deg,#dfc9bc,#B85C38)}
+.pi3{background:linear-gradient(145deg,#d8d4cc,#6E6254)}
+.pi4{background:linear-gradient(145deg,#c2cec4,#2A3D2C)}
+.pillar-text{padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+.pillar-eye{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:.75rem;display:flex;align-items:center;gap:8px}
+.pillar-eye::after{content:'';flex:1;height:1px;background:var(--border)}
+.pillar-text h2{font-family:var(--serif);font-size:clamp(26px,2.5vw,38px);font-weight:300;color:var(--charcoal);margin-bottom:1rem;line-height:1.25}
+.pillar-text p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1.25rem}
+.pillar-facts{display:flex;flex-direction:column;gap:.6rem}
+.pf-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink)}
+.pf-item::before{content:'✓';color:var(--sage);font-weight:500;flex-shrink:0}
+.pf-number{font-family:var(--serif);font-size:32px;font-weight:300;color:var(--terra);display:block;margin-top:1.25rem}
+
+.supply-section{padding:5rem 2.5rem;max-width:1100px;margin:0 auto}
+.supply-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:flex;align-items:center;gap:10px;margin-bottom:.75rem}
+.supply-eye::after{content:'';flex:1;height:1px;background:var(--border)}
+.supply-h2{font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:300;color:var(--charcoal);margin-bottom:2.5rem}
+.supply-chain{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.supply-chain::after{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--border)}
+.sc-step{text-align:center;padding:0 .5rem;position:relative;z-index:1}
+.sc-dot{width:56px;height:56px;border-radius:50%;background:var(--forest);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;border:3px solid var(--cream-deep)}
+.sc-dot svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.5}
+.sc-step h4{font-size:13px;font-weight:500;margin-bottom:.4rem}
+.sc-step p{font-size:11px;color:var(--muted);line-height:1.5}
+.sc-step .sc-cert{font-size:10px;color:var(--sage);margin-top:.5rem;letter-spacing:.04em}
+
+.report-section{background:var(--terra-light);padding:5rem 2.5rem;text-align:center}
+.report-section h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:300;color:var(--charcoal);margin-bottom:.75rem}
+.report-section p{font-size:15px;color:var(--muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto}
+.btn-dl{display:inline-flex;align-items:center;gap:10px;background:var(--charcoal);color:#fff;padding:14px 28px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .3s}
+.btn-dl:hover{background:var(--terra)}
+
+footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
+.fg{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.fl{font-family:var(--serif);font-size:22px;font-weight:300;margin-bottom:.75rem}.fl em{color:var(--terra);font-style:italic}
+.fp2{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;max-width:260px;margin-bottom:1.5rem}
+.fc h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1.25rem}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fc li{font-size:13px;color:rgba(255,255,255,.5)}
+.fb{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fleg p{font-size:12px;color:rgba(255,255,255,.3)}.fleg a{color:rgba(255,255,255,.35);text-decoration:underline}
+.fkvk{font-size:11px;color:rgba(255,255,255,.2);margin-top:6px}
+
+@media(max-width:900px){.pillar,.pillar.reverse{grid-template-columns:1fr;direction:ltr}.pillar-img-inner{min-height:280px}.supply-chain{grid-template-columns:1fr 1fr}.supply-chain::after{display:none}.cert-grid{grid-template-columns:1fr 1fr}.impact-bar{flex-direction:column}.impact-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding:1.25rem 2rem}}
+@media(max-width:768px){nav{padding:0 1.25rem}.nav-links{display:none}.fg{grid-template-columns:1fr 1fr}.pillar-text{padding:2.5rem 1.5rem}.supply-chain{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="location.href='index.html'">Terra<em>Verde</em></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Shop</a></li>
+    <li><a href="sustainability.html" class="on">Sustainability</a></li>
+    <li><a href="our-story.html">Our Story</a></li>
+    <li><a href="blog.html">Journal</a></li>
+    <li><a href="gift-finder.html">Gift Finder</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="icon-btn"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+  </div>
+</nav>
+
+<section class="sus-hero">
+  <span class="sus-hero-eye">Our sustainability commitment</span>
+  <h1>Beauty that doesn't<br>cost the <em>earth.</em></h1>
+  <p>We believe a product can be genuinely beautiful and genuinely responsible. Here's exactly how we make that happen — with real numbers, real people and real accountability.</p>
+  <div class="impact-bar">
+    <div class="impact-item"><span class="impact-num">418 kg</span><span class="impact-label">Plastic avoided in packaging</span></div>
+    <div class="impact-item"><span class="impact-num">14</span><span class="impact-label">Artisan families supported</span></div>
+    <div class="impact-item"><span class="impact-num">100%</span><span class="impact-label">Carbon-offset shipments</span></div>
+    <div class="impact-item"><span class="impact-num">35%</span><span class="impact-label">Above-minimum wages paid</span></div>
+    <div class="impact-item"><span class="impact-num">0</span><span class="impact-label">Products to landfill (take-back)</span></div>
+  </div>
+</section>
+
+<div class="sus-intro">
+  <h2>We reject vague sustainability claims</h2>
+  <p>Words like "eco-friendly" and "conscious" are meaningless without specifics. On this page you'll find exactly what we do, how we verify it and where we still have work to do. Honest accountability matters more to us than good marketing.</p>
+</div>
+
+<section class="cert-section">
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-logo">GOTS</div>
+      <h3>GOTS Certified</h3>
+      <p>Global Organic Textile Standard covers all our cotton and linen products from field to finished item. Certification number: NL-12847.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-logo">OT</div>
+      <h3>OEKO-TEX® 100</h3>
+      <p>Every dye and process used on our fabrics is tested for harmful substances. Certificate: 2026-OT-0342.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-logo">FT</div>
+      <h3>Fair Trade Verified</h3>
+      <p>Our production partners are independently audited for fair wages, safe conditions and worker rights. Annual audit report available on request.</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-logo">CO₂</div>
+      <h3>Carbon Neutral Shipping</h3>
+      <p>Every shipment is 100% carbon-offset via South Pole Group's verified Kenyan reforestation programme.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pillar-section">
+  <div class="pillar">
+    <div class="pillar-img"><div class="pillar-img-inner pi1"></div></div>
+    <div class="pillar-text">
+      <div class="pillar-eye">01 · Materials</div>
+      <h2>What's in your product — and where it comes from</h2>
+      <p>We use only four core materials: Belgian linen, GOTS-certified organic cotton, natural jute and hand-harvested seagrass. Each is chosen for its biodegradability, durability and low environmental impact.</p>
+      <div class="pillar-facts">
+        <div class="pf-item">Belgian linen uses 85% less water than conventional cotton</div>
+        <div class="pf-item">All dyes OEKO-TEX® certified — no azo dyes, no heavy metals</div>
+        <div class="pf-item">Seagrass is wild-harvested and fully regenerative</div>
+        <div class="pf-item">No synthetic fibres in any product, ever</div>
+      </div>
+      <span class="pf-number">0 synthetic fibres</span>
+    </div>
+  </div>
+  <div class="pillar reverse">
+    <div class="pillar-img"><div class="pillar-img-inner pi2"></div></div>
+    <div class="pillar-text">
+      <div class="pillar-eye">02 · People</div>
+      <h2>The artisans who make everything</h2>
+      <p>We work with 14 artisan family workshops across India and Portugal. We visit every partner at least once per year, pay 35% above regional minimum wage, and do not accept subcontracting without our written approval.</p>
+      <div class="pillar-facts">
+        <div class="pf-item">14 partner workshops, all independently Fair Trade audited</div>
+        <div class="pf-item">35% above regional minimum wage, paid on time</div>
+        <div class="pf-item">No child labour — zero tolerance, zero exceptions</div>
+        <div class="pf-item">Annual factory visits by our founder, Emma de Vries</div>
+      </div>
+      <span class="pf-number">14 families</span>
+    </div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-img"><div class="pillar-img-inner pi3"></div></div>
+    <div class="pillar-text">
+      <div class="pillar-eye">03 · Packaging</div>
+      <h2>Zero plastic. Not "reduced plastic." Zero.</h2>
+      <p>Every single piece of TerraVerde packaging is plastic-free — from the outer shipping box to the inner tissue wrap. In 2025 we eliminated 418 kg of plastic from our supply chain versus our 2023 baseline.</p>
+      <div class="pillar-facts">
+        <div class="pf-item">Recycled cardboard boxes — FSC certified</div>
+        <div class="pf-item">Tissue paper in brand colours — acid-free, compostable</div>
+        <div class="pf-item">Paper tape — no plastic adhesive</div>
+        <div class="pf-item">Printed thank-you card on 100% recycled stock</div>
+      </div>
+      <span class="pf-number">418 kg plastic avoided</span>
+    </div>
+  </div>
+  <div class="pillar reverse">
+    <div class="pillar-img"><div class="pillar-img-inner pi4"></div></div>
+    <div class="pillar-text">
+      <div class="pillar-eye">04 · Circularity</div>
+      <h2>Our take-back programme — closing the loop</h2>
+      <p>When your TerraVerde product reaches the end of its life, we want it back. Send it to us and we'll upcycle, compost or donate it — and give you 15% off your next order. No product we've made has gone to landfill.</p>
+      <div class="pillar-facts">
+        <div class="pf-item">Take-back label included with every order — prepaid return</div>
+        <div class="pf-item">Worn items repaired by our artisan partners</div>
+        <div class="pf-item">Unsalvageable items composted or recycled as industrial textile</div>
+        <div class="pf-item">15% credit on your next purchase for every return</div>
+      </div>
+      <span class="pf-number">0 products to landfill</span>
+    </div>
+  </div>
+</section>
+
+<section class="supply-section">
+  <div class="supply-eye">Our supply chain</div>
+  <h2 class="supply-h2">Transparent from field to front door</h2>
+  <div class="supply-chain">
+    <div class="sc-step">
+      <div class="sc-dot"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/></svg></div>
+      <h4>Raw Materials</h4>
+      <p>Belgian linen, Indian organic cotton, natural jute</p>
+      <div class="sc-cert">GOTS / OEKO-TEX</div>
+    </div>
+    <div class="sc-step">
+      <div class="sc-dot"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <h4>Weaving & Dyeing</h4>
+      <p>Family workshops, Jaipur & Porto</p>
+      <div class="sc-cert">Fair Trade audited</div>
+    </div>
+    <div class="sc-step">
+      <div class="sc-dot"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <h4>Quality Check</h4>
+      <p>Hand-inspected by workshop leads before shipment</p>
+      <div class="sc-cert">100% inspected</div>
+    </div>
+    <div class="sc-step">
+      <div class="sc-dot"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+      <h4>Packaging & Shipping</h4>
+      <p>Amsterdam warehouse · plastic-free · CO₂ offset</p>
+      <div class="sc-cert">South Pole Group</div>
+    </div>
+    <div class="sc-step">
+      <div class="sc-dot"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <h4>Your Home</h4>
+      <p>Delivered with care guide & take-back label</p>
+      <div class="sc-cert">Circular by design</div>
+    </div>
+  </div>
+</section>
+
+<section class="report-section">
+  <h2>Annual Sustainability Report 2025</h2>
+  <p>Full breakdown of our environmental and social impact — including what we're still working on. We publish this every January.</p>
+  <button class="btn-dl">Download Report 2025 (PDF) ↓</button>
+</section>
+
+<footer>
+  <div class="fg">
+    <div><div class="fl">Terra<em>Verde</em></div><p class="fp2">Sustainable home products & accessories, made by artisans who care. Designed in Amsterdam.</p></div>
+    <div class="fc"><h4>Shop</h4><ul><li><a href="index.html#products" style="color:inherit">Tabletop</a></li><li><a href="index.html#products" style="color:inherit">Accessories</a></li><li><a href="index.html#products" style="color:inherit">Home Décor</a></li><li><a href="gift-finder.html" style="color:inherit">Gift Sets</a></li></ul></div>
+    <div class="fc"><h4>Company</h4><ul><li><a href="our-story.html" style="color:inherit">Our Story</a></li><li><a href="sustainability.html" style="color:inherit">Sustainability</a></li><li><a href="blog.html" style="color:inherit">Journal</a></li><li><a href="wholesale.html" style="color:inherit">Wholesale</a></li></ul></div>
+    <div class="fc"><h4>Help</h4><ul><li><a href="wholesale.html#contact" style="color:inherit">FAQ</a></li><li><a href="wholesale.html#contact" style="color:inherit">Shipping</a></li><li><a href="blog.html" style="color:inherit">Care Guide</a></li><li><a href="wholesale.html#contact" style="color:inherit">Contact</a></li></ul></div>
+  </div>
+  <div class="fb">
+    <div class="fleg"><p>© 2026 TerraVerde · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p><p class="fkvk">TerraVerde B.V. · KvK: 87654321 · VAT: NL864213579B01 · Herengracht 182, Amsterdam</p></div>
+  </div>
+</footer>
+</body>
+</html>

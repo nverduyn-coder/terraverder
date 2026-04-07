@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Journal — TerraVerde Sustainable Living</title>
+<meta name="description" content="Styling guides, care tips, artisan stories and sustainability insights from the TerraVerde team. Slow living, conscious homes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#F8F4EE;--cream-deep:#F0EAE0;--terra:#B85C38;--terra-light:#F2E4DC;--sage:#5C7A5E;--forest:#2A3D2C;--charcoal:#1C1C1A;--ink:#2E2C28;--muted:#6E6860;--border:#DDD8D0;--border-light:#EDE9E2;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif;--ease:cubic-bezier(.25,.46,.45,.94)}
+html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--sans)}
+nav{background:var(--cream);border-bottom:1px solid var(--border-light);position:sticky;top:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem}
+.logo{font-family:var(--serif);font-size:22px;font-weight:400;cursor:pointer}.logo em{color:var(--terra);font-style:italic}
+.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{font-size:13px;letter-spacing:.04em;color:var(--muted);transition:color .2s}.nav-links a.on{color:var(--ink)}
+.nav-right{display:flex;gap:1rem}
+.icon-btn{background:none;border:none;padding:8px;display:flex;align-items:center;position:relative}.icon-btn svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.5}
+
+/* HERO */
+.blog-hero{padding:5rem 2.5rem 3rem;text-align:center;border-bottom:1px solid var(--border-light)}
+.blog-hero-eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;display:block}
+.blog-hero h1{font-family:var(--serif);font-size:clamp(40px,5vw,68px);font-weight:300;color:var(--charcoal);margin-bottom:.75rem}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 2rem;line-height:1.7}
+.blog-cats{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.blog-cat{padding:7px 18px;border:1px solid var(--border);background:transparent;font-size:12px;letter-spacing:.05em;color:var(--muted);cursor:pointer;transition:all .2s;font-family:var(--sans)}
+.blog-cat:hover,.blog-cat.active{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
+
+/* FEATURED POST */
+.featured-post{max-width:1200px;margin:0 auto;padding:3rem 2.5rem;display:grid;grid-template-columns:5fr 4fr;gap:4rem;align-items:center;border-bottom:1px solid var(--border-light)}
+.fp-img{aspect-ratio:4/3;overflow:hidden;cursor:pointer}
+.fp-img-inner{width:100%;height:100%;background:linear-gradient(145deg,#c8d4c2 0%,#3A5A3C 100%);transition:transform .5s var(--ease)}
+.fp-img:hover .fp-img-inner{transform:scale(1.04)}
+.fp-text{}
+.fp-meta{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.fp-tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;background:var(--sage-light);color:var(--sage)}
+.fp-date{font-size:12px;color:var(--muted)}
+.fp-text h2{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:300;line-height:1.25;margin-bottom:1rem;cursor:pointer;transition:color .2s}
+.fp-text h2:hover{color:var(--terra)}
+.fp-text p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
+.fp-author{display:flex;align-items:center;gap:10px}
+.fp-avatar{width:36px;height:36px;border-radius:50%;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:500}
+.fp-author-text strong{display:block;font-size:13px}
+.fp-author-text span{font-size:12px;color:var(--muted)}
+.fp-read{margin-top:1.5rem;display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);border-bottom:1px solid var(--terra);padding-bottom:2px;transition:gap .2s}
+.fp-read:hover{gap:12px}
+
+/* GRID */
+.blog-grid-section{max-width:1200px;margin:0 auto;padding:3rem 2.5rem 5rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.blog-card{cursor:pointer}
+.bc-img{aspect-ratio:4/3;overflow:hidden;margin-bottom:1rem}
+.bc-img-inner{width:100%;height:100%;transition:transform .5s var(--ease)}
+.blog-card:hover .bc-img-inner{transform:scale(1.04)}
+.bc-img:nth-child(1),.blog-card:nth-child(1) .bc-img-inner{background:linear-gradient(145deg,#dfc9bc,#B85C38)}
+.blog-card:nth-child(2) .bc-img-inner{background:linear-gradient(145deg,#d8d4cc,#8A8070)}
+.blog-card:nth-child(3) .bc-img-inner{background:linear-gradient(145deg,#e8e4d8,#C4B89A)}
+.blog-card:nth-child(4) .bc-img-inner{background:linear-gradient(145deg,#c8d4c2,#5C7A5E)}
+.blog-card:nth-child(5) .bc-img-inner{background:linear-gradient(145deg,#d0c8e0,#8070A0)}
+.blog-card:nth-child(6) .bc-img-inner{background:linear-gradient(145deg,#dfc9bc,#8C3E22)}
+.bc-meta{display:flex;align-items:center;gap:8px;margin-bottom:.6rem}
+.bc-tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px}
+.bc-tag.care{background:var(--terra-light);color:var(--terra)}
+.bc-tag.style{background:var(--sage-light);color:var(--sage)}
+.bc-tag.story{background:#E8E4DC;color:#6E5A40}
+.bc-tag.sustain{background:#DDE8E4;color:#3A6058}
+.bc-date{font-size:11px;color:var(--muted)}
+.bc-title{font-family:var(--serif);font-size:20px;font-weight:300;line-height:1.3;margin-bottom:.5rem;transition:color .2s}
+.blog-card:hover .bc-title{color:var(--terra)}
+.bc-excerpt{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:.75rem}
+.bc-read{font-size:12px;color:var(--terra);letter-spacing:.06em;display:flex;align-items:center;gap:5px}
+
+/* NEWSLETTER */
+.blog-nl{background:var(--forest);color:#fff;padding:5rem 2.5rem;text-align:center}
+.blog-nl h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:300;margin-bottom:.75rem}
+.blog-nl p{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:2rem}
+.nl-form{display:flex;max-width:420px;margin:0 auto;border:1px solid rgba(255,255,255,.2)}
+.nl-input{flex:1;background:transparent;border:none;padding:14px 16px;font-size:14px;color:#fff;outline:none;font-family:var(--sans)}
+.nl-input::placeholder{color:rgba(255,255,255,.3)}
+.nl-btn{background:var(--terra);color:#fff;border:none;padding:14px 22px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;font-family:var(--sans)}
+.nl-note{font-size:12px;color:rgba(255,255,255,.3);margin-top:1rem}
+
+footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
+.fg{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.fl{font-family:var(--serif);font-size:22px;font-weight:300;margin-bottom:.75rem}.fl em{color:var(--terra);font-style:italic}
+.fp2{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;max-width:260px;margin-bottom:1.5rem}
+.fc h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1.25rem}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fc li{font-size:13px;color:rgba(255,255,255,.5)}
+.fb{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fleg p{font-size:12px;color:rgba(255,255,255,.3)}.fleg a{color:rgba(255,255,255,.35);text-decoration:underline}
+.fkvk{font-size:11px;color:rgba(255,255,255,.2);margin-top:6px}
+
+@media(max-width:900px){.featured-post{grid-template-columns:1fr;gap:2rem}.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){nav{padding:0 1.25rem}.nav-links{display:none}.blog-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo" onclick="location.href='index.html'">Terra<em>Verde</em></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Shop</a></li>
+    <li><a href="sustainability.html">Sustainability</a></li>
+    <li><a href="our-story.html">Our Story</a></li>
+    <li><a href="blog.html" class="on">Journal</a></li>
+    <li><a href="gift-finder.html">Gift Finder</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="icon-btn"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+    <button class="icon-btn" style="position:relative"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <span class="blog-hero-eye">Our Journal</span>
+  <h1>Stories for<br><em>conscious homes</em></h1>
+  <p>Care guides, styling inspiration, artisan stories and sustainability insights — written by the TerraVerde team.</p>
+  <div class="blog-cats">
+    <button class="blog-cat active" onclick="filterCat('all',this)">All</button>
+    <button class="blog-cat" onclick="filterCat('care',this)">Care & Use</button>
+    <button class="blog-cat" onclick="filterCat('style',this)">Styling</button>
+    <button class="blog-cat" onclick="filterCat('story',this)">Artisan Stories</button>
+    <button class="blog-cat" onclick="filterCat('sustain',this)">Sustainability</button>
+  </div>
+</div>
+
+<div class="featured-post">
+  <div class="fp-img"><div class="fp-img-inner"></div></div>
+  <div class="fp-text">
+    <div class="fp-meta">
+      <span class="fp-tag">Featured · Care & Use</span>
+      <span class="fp-date">April 2026</span>
+    </div>
+    <h2>How to wash & care for linen placemats — and why they get better every time</h2>
+    <p>Natural linen is one of the few textiles that genuinely improves with age. Here's everything you need to know to keep yours beautiful for decades, not seasons.</p>
+    <div class="fp-author">
+      <div class="fp-avatar">EV</div>
+      <div class="fp-author-text"><strong>Emma de Vries</strong><span>Founder, TerraVerde · 8 min read</span></div>
+    </div>
+    <a href="#" class="fp-read">Read article →</a>
+  </div>
+</div>
+
+<div class="blog-grid-section">
+  <div class="blog-grid" id="blog-grid">
+    <div class="blog-card" data-cat="style">
+      <div class="bc-img"><div class="bc-img-inner"></div></div>
+      <div class="bc-meta"><span class="bc-tag style">Styling</span><span class="bc-date">March 2026</span></div>
+      <h3 class="bc-title">How to style a sustainable summer table — 5 looks, one linen set</h3>
+      <p class="bc-excerpt">From a casual Sunday brunch to an elegant dinner party, see how our sage placemat set works across five different table settings.</p>
+      <span class="bc-read">Read more →</span>
+    </div>
+    <div class="blog-card" data-cat="sustain">
+      <div class="bc-img"><div class="bc-img-inner"></div></div>
+      <div class="bc-meta"><span class="bc-tag sustain">Sustainability</span><span class="bc-date">March 2026</span></div>
+      <h3 class="bc-title">Jute vs. linen: which is more sustainable? An honest comparison</h3>
+      <p class="bc-excerpt">We break down the environmental footprint of both fibres — from water use to biodegradability — so you can make a genuinely informed choice.</p>
+      <span class="bc-read">Read more →</span>
+    </div>
+    <div class="blog-card" data-cat="story">
+      <div class="bc-img"><div class="bc-img-inner"></div></div>
+      <div class="bc-meta"><span class="bc-tag story">Artisan Story</span><span class="bc-date">February 2026</span></div>
+      <h3 class="bc-title">Three generations of craft: our visit to the Sharma family workshop</h3>
+      <p class="bc-excerpt">We spent five days with the artisans who make our linen placemats and napkins. Here's what we learned about craft, patience, and pride.</p>
+      <span class="bc-read">Read more →</span>
+    </div>
+    <div class="blog-card" data-cat="care">
+      <div class="bc-img"><div class="bc-img-inner"></div></div>
+      <div class="bc-meta"><span class="bc-tag care">Care & Use</span><span class="bc-date">February 2026</span></div>
+      <h3 class="bc-title">The complete guide to caring for jute bags — from daily use to storage</h3>
+      <p class="bc-excerpt">Jute is durable but it needs the right care. Everything you need to know to keep your TerraVerde bag looking beautiful for years.</p>
+      <span class="bc-read">Read more →</span>
+    </div>
+    <div class="blog-card" data-cat="style">
+      <div class="bc-img"><div class="bc-img-inner"></div></div>
+      <div class="bc-meta"><span class="bc-tag style">Styling</span><span class="bc-date">January 2026</span></div>
+      <h3 class="bc-title">15 sustainable gift ideas for the conscious home — for every budget</h3>
+      <p class="bc-excerpt">A thoughtfully curated gift guide for the person who prefers experiences and meaning over quantity. Includes TerraVerde favourites and recommended makers.</p>
+      <span class="bc-read">Read more →</span>
+    </div>
+    <div class="blog-card" data-cat="sustain">
+      <div class="bc-img"><div class="bc-img-inner"></div></div>
+      <div class="bc-meta"><span class="bc-tag sustain">Sustainability</span><span class="bc-date">January 2026</span></div>
+      <h3 class="bc-title">What GOTS certification actually means — and why it matters for your home</h3>
+      <p class="bc-excerpt">The Global Organic Textile Standard is the gold standard in sustainable textiles. Here's what it covers, what it doesn't, and how to spot greenwashing.</p>
+      <span class="bc-read">Read more →</span>
+    </div>
+  </div>
+</div>
+
+<section class="blog-nl">
+  <h2>Stories delivered to your inbox</h2>
+  <p>New articles, styling inspiration and early access to new collections — plus 10% off your first order.</p>
+  <div class="nl-form">
+    <input class="nl-input" type="email" placeholder="Your email address" id="nl-email">
+    <button class="nl-btn" onclick="subscribe()">Subscribe</button>
+  </div>
+  <p class="nl-note">No spam. Unsubscribe anytime. Read our <a href="#" style="color:rgba(255,255,255,.4);text-decoration:underline">privacy policy</a>.</p>
+</section>
+
+<footer>
+  <div class="fg">
+    <div><div class="fl">Terra<em>Verde</em></div><p class="fp2">Sustainable home products & accessories, made by artisans who care. Designed in Amsterdam.</p></div>
+    <div class="fc"><h4>Shop</h4><ul><li><a href="index.html#products" style="color:inherit">Tabletop</a></li><li><a href="index.html#products" style="color:inherit">Accessories</a></li><li><a href="index.html#products" style="color:inherit">Home Décor</a></li><li><a href="gift-finder.html" style="color:inherit">Gift Sets</a></li></ul></div>
+    <div class="fc"><h4>Company</h4><ul><li><a href="our-story.html" style="color:inherit">Our Story</a></li><li><a href="sustainability.html" style="color:inherit">Sustainability</a></li><li><a href="blog.html" style="color:inherit">Journal</a></li><li><a href="wholesale.html" style="color:inherit">Wholesale</a></li></ul></div>
+    <div class="fc"><h4>Help</h4><ul><li><a href="wholesale.html#contact" style="color:inherit">FAQ</a></li><li><a href="wholesale.html#contact" style="color:inherit">Shipping</a></li><li><a href="blog.html" style="color:inherit">Care Guide</a></li><li><a href="wholesale.html#contact" style="color:inherit">Contact</a></li></ul></div>
+  </div>
+  <div class="fb">
+    <div class="fleg"><p>© 2026 TerraVerde · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p><p class="fkvk">TerraVerde B.V. · KvK: 87654321 · VAT: NL864213579B01</p></div>
+  </div>
+</footer>
+<script>
+function filterCat(cat,btn){
+  document.querySelectorAll('.blog-cat').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.blog-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
+  });
+}
+function subscribe(){
+  const v=document.getElementById('nl-email').value;
+  if(v&&v.includes('@')){alert('Subscribed! Check your inbox for 10% off.');document.getElementById('nl-email').value='';}
+  else alert('Please enter a valid email address.');
+}
+</script>
+</body>
+</html>
