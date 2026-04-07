@@ -306,8 +306,8 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
 .press-section{padding:2.5rem 2.5rem;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light)}
 .press-inner{display:flex;align-items:center;justify-content:center;gap:3.5rem;flex-wrap:wrap}
 .press-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone-mid)}
-.press-logo{font-family:var(--serif);font-size:18px;font-weight:300;color:var(--stone);letter-spacing:.06em;opacity:.6;transition:opacity .2s;cursor:pointer}
-.press-logo:hover{opacity:1}
+.press-logo{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--stone-dark);letter-spacing:.06em;opacity:.85;transition:opacity .2s;cursor:pointer}
+.press-logo:hover{opacity:1;color:var(--ink)}
 .press-sep{width:1px;height:20px;background:var(--border)}
 
 /* ── NEWSLETTER ── */
@@ -316,7 +316,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
 .newsletter-section .section-label::after,.newsletter-section .section-label::before{content:'';flex:1;height:1px;background:rgba(255,255,255,.1)}
 .newsletter-section h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:300;margin-bottom:.75rem;margin-top:.75rem}
 .newsletter-section p{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:2.5rem}
-.nl-form{display:flex;max-width:460px;margin:0 auto;border:1px solid rgba(255,255,255,.2)}
+.nl-form{display:flex;max-width:460px;margin:0 auto;border:1px solid rgba(255,255,255,.2);width:100%}
 .nl-input{flex:1;background:transparent;border:none;padding:14px 18px;font-size:14px;color:#fff;font-family:var(--sans);outline:none}
 .nl-input::placeholder{color:rgba(255,255,255,.3)}
 .nl-submit{background:var(--terra);color:#fff;border:none;padding:14px 24px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s;font-family:var(--sans)}
@@ -424,10 +424,21 @@ footer{background:var(--ink);color:#fff;padding:4rem 2.5rem 2rem}
   .ugc-grid{grid-template-columns:repeat(3,1fr)}
   .hero-stats{grid-template-columns:repeat(3,1fr)}
   .press-inner{gap:1.5rem}
+  .nl-form{max-width:90%;}
+  .cat-card-inner{align-items:flex-end;}
   .cart-upsell{display:none}
   .cert-strip{gap:1.5rem;padding:1.2rem 1.5rem}
 }
 @media(max-width:480px){
+  .cat-card-inner{align-items:center;justify-content:center;text-align:center;}
+  .cat-card-text h3{font-size:16px;}
+  .cat-card-text p{font-size:11px;}
+  .nl-form{flex-direction:column;max-width:280px;}
+  .nl-input{text-align:center;padding:12px;}
+  .nl-submit{padding:12px;}
+  .press-inner{gap:1rem;padding:0 1rem;}
+  .press-logo{font-size:15px;}
+  .press-sep{display:none;}
   .cat-grid{grid-template-columns:repeat(2,1fr)}
   .product-grid{grid-template-columns:repeat(2,1fr)}
   .hero h1{font-size:38px}
@@ -486,9 +497,11 @@ footer{background:var(--ink);color:#fff;padding:4rem 2.5rem 2rem}
   </div>
   <ul class="nav-center">
     <li><a href="index.html#products">Shop</a></li>
+    <li><a href="index.html#featured">Collectie</a></li>
     <li><a href="sustainability.html">Duurzaamheid</a></li>
     <li><a href="our-story.html">Ons Verhaal</a></li>
     <li><a href="blog.html">Journal</a></li>
+    <li><a href="wholesale.html">Wholesale</a></li>
     <li><a href="gift-finder.html">Gift Finder</a></li>
   </ul>
   <div class="nav-right">
@@ -513,10 +526,12 @@ footer{background:var(--ink);color:#fff;padding:4rem 2.5rem 2rem}
   </div>
   <div class="mobile-nav-links">
     <a href="#products" onclick="toggleMobileNav()">Shop</a>
+    <a href="index.html#featured" onclick="toggleMobileNav()">Collectie</a>
     <a href="sustainability.html" onclick="toggleMobileNav()">Duurzaamheid</a>
     <a href="our-story.html" onclick="toggleMobileNav()">Ons Verhaal</a>
     <a href="blog.html" onclick="toggleMobileNav()">Journal</a>
     <a href="gift-finder.html" onclick="toggleMobileNav()">Gift Finder</a>
+    <a href="product-detail.html" onclick="toggleMobileNav()">Producten</a>
   </div>
   <div class="mobile-nav-bottom">
     <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0169606d6d6e41756473736077647365642f6f6d">[email&#160;protected]</a> · +31 20 123 4567</p>
@@ -821,34 +836,34 @@ footer{background:var(--ink);color:#fff;padding:4rem 2.5rem 2rem}
     <div class="footer-col">
       <h4>Winkelen</h4>
       <ul>
-        <li>Tafelaccessoires</li>
-        <li>Tassen & Pouches</li>
-        <li>Woondecoratie</li>
-        <li>Cadeausets</li>
-        <li>Uitverkoop</li>
-        <li>Nieuw binnen</li>
+        <li><a href="index.html#products" style="color:inherit">Tafelaccessoires</a></li>
+        <li><a href="index.html#products" style="color:inherit">Tassen & Pouches</a></li>
+        <li><a href="index.html#products" style="color:inherit">Woondecoratie</a></li>
+        <li><a href="index.html#products" style="color:inherit">Cadeausets</a></li>
+        <li><a href="gift-finder.html" style="color:inherit">Cadeauvinder</a></li>
+        <li><a href="wholesale.html" style="color:inherit">Groothandel</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Bedrijf</h4>
       <ul>
-        <li>Ons Verhaal</li>
-        <li>Duurzaamheid</li>
-        <li>Onze Ambachtslieden</li>
-        <li>Journal / Blog</li>
-        <li>Pers & Media</li>
-        <li>Groothandel</li>
+        <li><a href="our-story.html" style="color:inherit">Ons Verhaal</a></li>
+        <li><a href="sustainability.html" style="color:inherit">Duurzaamheid</a></li>
+        <li><a href="our-story.html" style="color:inherit">Onze Ambachtslieden</a></li>
+        <li><a href="blog.html" style="color:inherit">Journal / Blog</a></li>
+        <li><a href="wholesale.html" style="color:inherit">Pers & Media</a></li>
+        <li><a href="wholesale.html" style="color:inherit">Groothandel</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Klantenservice</h4>
       <ul>
-        <li>Veelgestelde vragen</li>
-        <li>Verzending & Retourneren</li>
-        <li>Maattabel</li>
-        <li>Verzorgingsgids</li>
-        <li>Contacteer ons</li>
-        <li>Cadeauverpakking</li>
+        <li><a href="wholesale.html#contact" style="color:inherit">Veelgestelde vragen</a></li>
+        <li><a href="wholesale.html#contact" style="color:inherit">Verzending & Retourneren</a></li>
+        <li><a href="product-detail.html" style="color:inherit">Maattabel</a></li>
+        <li><a href="blog.html" style="color:inherit">Verzorgingsgids</a></li>
+        <li><a href="wholesale.html#contact" style="color:inherit">Contacteer ons</a></li>
+        <li><a href="index.html" style="color:inherit">Cadeauverpakking</a></li>
       </ul>
     </div>
   </div>
@@ -1012,9 +1027,7 @@ function addToCart(name, price, id) {
 }
 
 function openProduct(id) {
-  const p = PRODUCTS.find(x => x.id === id);
-  if (!p) return;
-  addToCart(p.name, p.price, p.id);
+  window.location.href = 'product-detail.html';
 }
 
 function toggleWishlistItem(id) {
@@ -1143,4 +1156,32 @@ function dismissCookie() {
   document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
 }
 
-window.a
+window.addEventListener('scroll',function(){
+  document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger-btn') || document.querySelector('.hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+  var closeBtn = document.getElementById('mobile-nav-close') || document.querySelector('.mobile-nav-close');
+  var overlay = document.getElementById('cart-overlay');
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNav.classList.toggle('open');
+    });
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      mobileNav.classList.remove('open');
+    });
+  }
+});
+
+setTimeout(() => document.getElementById('cookie-banner').classList.add('visible'), 1200);
+renderProducts();
+</script>
+</body>
+</html>
