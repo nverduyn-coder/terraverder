@@ -1149,34 +1149,22 @@ function dismissCookie() {
   document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
 }
 
-window.addEventListener('scroll',function(){
+window.addEventListener('scroll', function() {
   document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 60);
   document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  var hamburger = document.getElementById('hamburger-btn') || document.querySelector('.hamburger');
-  var mobileNav = document.getElementById('mobile-nav');
-  var closeBtn = document.getElementById('mobile-nav-close') || document.querySelector('.mobile-nav-close');
-  var overlay = document.getElementById('cart-overlay');
-
-  if (hamburger) {
-    hamburger.addEventListener('click', function(e) {
-      e.stopPropagation();
-      mobileNav.classList.toggle('open');
-    });
-  }
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function() {
-      mobileNav.classList.remove('open');
-    });
+  var hamburger = document.querySelector('.hamburger-btn');
+  var mobileNav = document.getElementById('mobile-nav-drawer');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() { mobileNav.classList.add('open'); });
   }
 });
 
 setTimeout(() => document.getElementById('cookie-banner').classList.add('visible'), 1200);
 renderProducts();
 </script>
-
 
 <div id="mobile-nav-drawer">
   <div class="mnav-header">
@@ -1192,9 +1180,19 @@ renderProducts();
   </div>
   <div class="mnav-bottom">hallo@terraverde.nl · +31 20 123 4567</div>
 </div>
+
 <script>
 function openMNav(){document.getElementById('mobile-nav-drawer').classList.add('open');}
 function closeMNav(){document.getElementById('mobile-nav-drawer').classList.remove('open');}
 </script>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- BACK TO TOP -->
+<button id="back-top" onclick="scrollToTop()" aria-label="Terug naar boven">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 </body>
 </html>
