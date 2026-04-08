@@ -92,7 +92,7 @@ footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
 .fkvk{font-size:11px;color:rgba(255,255,255,.2);margin-top:6px}
 
 @media(max-width:900px){.featured-post{grid-template-columns:1fr;gap:2rem}.blog-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){nav{padding:0 1.25rem}.nav-links{display:none}.blog-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){nav{padding:0 1.25rem}.nav-links{display:none}.nav-right{display:flex;align-items:center;gap:8px;}.blog-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}}
 </style>
 
 
@@ -245,7 +245,7 @@ function subscribe(){
 
 <div id="mobile-nav-drawer">
   <div class="mnav-header">
-    <span class="mnav-logo">Terra<em>Verde</em></span>
+    <a href="index.html" onclick="closeMNav()" style="text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400;color:#2E2C28;letter-spacing:.02em;">Terra<em style="color:#B85C38;font-style:italic;">Verde</em></a>
     <button class="mnav-close" onclick="closeMNav()">✕</button>
   </div>
   <div class="mnav-links">

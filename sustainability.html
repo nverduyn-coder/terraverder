@@ -90,7 +90,7 @@ footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
 .fkvk{font-size:11px;color:rgba(255,255,255,.2);margin-top:6px}
 
 @media(max-width:900px){.pillar,.pillar.reverse{grid-template-columns:1fr;direction:ltr}.pillar-img-inner{min-height:280px}.supply-chain{grid-template-columns:1fr 1fr}.supply-chain::after{display:none}.cert-grid{grid-template-columns:1fr 1fr}.impact-bar{flex-direction:column}.impact-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding:1.25rem 2rem}}
-@media(max-width:768px){nav{padding:0 1.25rem}.nav-links{display:none}.fg{grid-template-columns:1fr 1fr}.pillar-text{padding:2.5rem 1.5rem}.supply-chain{grid-template-columns:1fr}}
+@media(max-width:768px){nav{padding:0 1.25rem}.nav-links{display:none}.nav-right{display:flex;align-items:center;gap:8px;}.fg{grid-template-columns:1fr 1fr}.pillar-text{padding:2.5rem 1.5rem}.supply-chain{grid-template-columns:1fr}}
 </style>
 
 
@@ -290,7 +290,7 @@ footer{background:var(--charcoal);color:#fff;padding:4rem 2.5rem 2rem}
 
 <div id="mobile-nav-drawer">
   <div class="mnav-header">
-    <span class="mnav-logo">Terra<em>Verde</em></span>
+    <a href="index.html" onclick="closeMNav()" style="text-decoration:none;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:400;color:#2E2C28;letter-spacing:.02em;">Terra<em style="color:#B85C38;font-style:italic;">Verde</em></a>
     <button class="mnav-close" onclick="closeMNav()">✕</button>
   </div>
   <div class="mnav-links">
